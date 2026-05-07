@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ridgeways Finance Sacco — Your trusted financial partner in Nairobi. Affordable savings, loans, asset finance and digital banking for all Kenyans." />
+  <meta name="keywords" content="Ridgeways Finance, Sacco, Nairobi, Loans, Savings, Digital Banking, SASRA, Kenya" />
+  <meta name="author" content="Ridgeways Finance Sacco Society Limited" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ridgeways Finance | Your Financial Partner" />
+  <meta property="og:description" content="Affordable savings, loans, and digital banking for all Kenyans. SASRA regulated." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ridgewaysfinance.co.ke" />
+
+  <title>Ridgeways Finance | Your Financial Partner</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a5c38'/><text y='.9em' font-size='70' x='15' fill='white' font-weight='bold'>R</text></svg>" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       TOP BAR
+  ══════════════════════════════════════════ -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span>📞 <a href="tel:0700123456" style="color:#a7d8be;text-decoration:none">0700 123 456</a></span>
+        <span>✉️ <a href="mailto:info@ridgewaysfinance.co.ke" style="color:#a7d8be;text-decoration:none">info@ridgewaysfinance.co.ke</a></span>
+      </div>
+      <div>
+        <a href="member-login.html">Member Login</a>
+        <a href="dashboard.html">Online Banking</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HEADER / NAV
+  ══════════════════════════════════════════ -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Main Nav — anchors on homepage, full page links everywhere else -->
+        <nav id="mainNav">
+          <a href="products.html">Products</a>
+          <a href="loans.html">Loans</a>
+          <a href="savings.html">Savings</a>
+          <a href="digital-banking.html">Digital Banking</a>
+          <a href="about.html">About Us</a>
+          <a href="membership.html" class="nav-cta">Join Now →</a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-circle-1"></div>
+    <div class="hero-circle-2"></div>
+    <div class="hero-blob"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Trusted Since 2008 · Ridgeways, Nairobi</div>
+        <h1>Your Trusted <em>Financial</em><br>Partner in Nairobi</h1>
+        <p>Ridgeways Finance empowers members with affordable savings, investment accounts, and flexible loan products — all designed to help you achieve your financial goals.</p>
+        <div class="hero-actions">
+          <a href="membership.html" class="btn-primary">🚀 Become a Member</a>
+          <a href="products.html" class="btn-outline">Explore Products →</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="hero-stat-num" data-count="12" data-prefix="" data-suffix="K+">0</span>
+            <span class="hero-stat-label">Active Members</span>
+          </div>
+          <div>
+            <span class="hero-stat-num" data-count="3.2" data-prefix="KSh " data-suffix="B">0</span>
+            <span class="hero-stat-label">Asset Base</span>
+          </div>
+          <div>
+            <span class="hero-stat-num" data-count="8.5" data-prefix="" data-suffix="%">0</span>
+            <span class="hero-stat-label">Interest P.A.</span>
+          </div>
+          <div>
+            <span class="hero-stat-num" data-count="16" data-prefix="" data-suffix="+">0</span>
+            <span class="hero-stat-label">Years of Service</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       USSD QUICK ACCESS BAR
+  ══════════════════════════════════════════ -->
+  <div class="ussd-bar">
+    <p>📱 Transact from anywhere — Dial <strong>*288#</strong> · Use the <strong>Ridgeways Finance App</strong> · M-Pesa Paybill: <strong>700288</strong></p>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PRODUCTS SECTION
+  ══════════════════════════════════════════ -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Financial Products<br>Built for You</h2>
+        <p class="section-subtitle">A wide range of savings and loan products designed to meet every financial need at every stage of life.</p>
+      </div>
+<div class="products-grid">
+
+        <div class="product-card reveal">
+          <div class="product-top-img"><img alt="Development Loans" src="loan.jpg"></div>
+          <h3>Development Loans</h3>
+
+          <p>Finance your personal or business development projects with our flexible development loans at competitive rates.</p>
+          <div class="product-rate">From 1% p.m.</div>
+          <a href="loans.html#development" class="product-link">Learn more →</a>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-top-img"><img alt="Development Loans" src="loan.jpg"></div>
+          <h3>Supersaver Loans</h3>
+
+          <p>Quick access to credit secured against your savings balance. Get up to 3× your savings in minutes.</p>
+          <div class="product-rate">Instant approval</div>
+          <a href="loans.html#supersaver" class="product-link">Learn more →</a>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-top-img"><img alt="Development Loans" src="assets-finance.jpg"></div>
+          <h3>Asset Finance</h3>
+
+          <p>Purchase land, property, or equipment with our structured asset finance products with extended repayment periods.</p>
+          <div class="product-rate">Up to 84 months</div>
+          <a href="assets.html" class="product-link">Learn more →</a>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-top-img"><img alt="Diaspora Account" src="diaspora.jpg"></div>
+          <h3>Diaspora Account</h3>
+
+          <p>Ideal for Ridgeways Finance members living and working abroad. Save, invest and access loans from anywhere.</p>
+          <div class="product-rate">8.5% P.A.</div>
+          <a href="savings.html#diaspora" class="product-link">Learn more →</a>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-top-img"><img alt="Development Loans" src="deposit.jpg"></div>
+          <h3>Fixed Deposit</h3>
+
+          <p>Grow your wealth with our attractive fixed deposit accounts. Flexible periods from 3 to 12 months.</p>
+          <div class="product-rate">Up to 8.5% P.A.</div>
+          <a href="savings.html#fixed" class="product-link">Learn more →</a>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-top-img"><img alt="Development Loans" src="savings.jpg"></div>
+          <h3>Akiba Savings</h3>
+
+          <p>Save for a holiday, school fees, or long-term project. Earn competitive interest while building a habit of saving.</p>
+          <div class="product-rate">Up to 7% P.A.</div>
+          <a href="savings.html#akiba" class="product-link">Learn more →</a>
+        </div>
+
+      </div>
+
+      <!-- View All Products CTA -->
+      <div style="text-align:center;margin-top:40px">
+        <a href="products.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:700;font-size:0.95rem;text-decoration:none;border:2px solid var(--green);padding:12px 28px;border-radius:50px;transition:all 0.25s" onmouseover="this.style.background='var(--green)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--green)'">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-main-card">
+            <h2>Growing With Our Members Since 2008</h2>
+            <p>Established in Ridgeways, Nairobi, we have grown from a modest community cooperative into one of Nairobi's most trusted financial institutions — with a firm commitment to affordable and inclusive finance.</p>
+          </div>
+          <div class="about-float-card">
+            <div class="num">KSh 3.2B+</div>
+            <div class="label">Total Asset Base</div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <span class="section-tag">About Ridgeways Finance</span>
+          <h2 class="section-title">A Community-Centred Financial Institution</h2>
+          <p class="section-subtitle">We are focused on building a sustainable financial future for every member — offering products tailored to individual, group, and corporate needs.</p>
+          <div class="about-features">
+
+            <div class="about-feature">
+              <div class="feature-icon">🛡️</div>
+              <div class="feature-text">
+                <h4>Regulated &amp; Secure</h4>
+                <p>Licensed and regulated by SASRA (Sacco Societies Regulatory Authority) for your security.</p>
+              </div>
+            </div>
+
+            <div class="about-feature">
+              <div class="feature-icon">🤝</div>
+              <div class="feature-text">
+                <h4>Member-Owned</h4>
+                <p>You are not just a customer — you are an owner. Profits are returned to members as dividends.</p>
+              </div>
+            </div>
+
+            <div class="about-feature">
+              <div class="feature-icon">📍</div>
+              <div class="feature-text">
+                <h4>Multiple Branches</h4>
+                <p>Conveniently located branches across Nairobi to serve you wherever you are.</p>
+              </div>
+            </div>
+
+            <div class="about-feature">
+              <div class="feature-icon">💬</div>
+              <div class="feature-text">
+                <h4>Dedicated Support</h4>
+                <p>Our customer service team is available Monday to Saturday to assist you with all your needs.</p>
+              </div>
+            </div>
+
+          </div>
+          <div style="margin-top:28px">
+            <a href="about.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--green);color:white;padding:12px 26px;border-radius:50px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.25s" onmouseover="this.style.background='var(--green-dark)'" onmouseout="this.style.background='var(--green)'">Learn Our Story →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       DIGITAL BANKING SECTION
+  ══════════════════════════════════════════ -->
+  <section class="digital" id="digital">
+    <div class="container">
+      <div class="digital-inner">
+
+        <div class="digital-content reveal">
+          <span class="section-tag">Digital Banking</span>
+          <h2 class="section-title">Bank From<br>Anywhere, Anytime</h2>
+          <p class="section-subtitle">Access your accounts, transfer funds, borrow, and pay bills — all from your phone. Banking has never been easier.</p>
+          <div class="digital-services">
+            <div class="digital-service">
+              <div class="ds-icon">💵</div>
+              <h4>Cash Withdrawal</h4>
+              <p>Withdraw to M-Pesa or any bank instantly</p>
+            </div>
+            <div class="digital-service">
+              <div class="ds-icon">📥</div>
+              <h4>Cash Deposit</h4>
+              <p>Deposit via Paybill 700288</p>
+            </div>
+            <div class="digital-service">
+              <div class="ds-icon">🔄</div>
+              <h4>Transfers</h4>
+              <p>Transfer to bank or member accounts</p>
+            </div>
+            <div class="digital-service">
+              <div class="ds-icon">🧾</div>
+              <h4>Mini Statement</h4>
+              <p>View recent transactions instantly</p>
+            </div>
+            <div class="digital-service">
+              <div class="ds-icon">📊</div>
+              <h4>Balance Enquiry</h4>
+              <p>Check share, savings &amp; loan balance</p>
+            </div>
+            <div class="digital-service">
+              <div class="ds-icon">💳</div>
+              <h4>Borrow Loans</h4>
+              <p>Apply for emergency loans on-the-go</p>
+            </div>
+          </div>
+          <div style="margin-top:28px">
+            <a href="digital-banking.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--green-dark);padding:13px 26px;border-radius:50px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.25s">Explore Digital Banking →</a>
+          </div>
+        </div>
+
+        <div class="digital-visual reveal">
+          <div class="ussd-display">
+            <div class="ussd-code">*288#</div>
+            <div class="ussd-label">Dial on any mobile network — 24/7</div>
+            <div class="ussd-steps">
+              <div class="ussd-step"><span class="num">1</span> Dial *288# on your phone</div>
+              <div class="ussd-step"><span class="num">2</span> Enter your PIN to authenticate</div>
+              <div class="ussd-step"><span class="num">3</span> Select your desired service</div>
+              <div class="ussd-step"><span class="num">4</span> Transaction complete — SMS sent</div>
+            </div>
+          </div>
+          <div class="app-badges">
+            <a href="digital-banking.html" class="app-badge">
+              <span class="icon">🤖</span>
+              <div class="text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+            <a href="digital-banking.html" class="app-badge">
+              <span class="icon">🍎</span>
+              <div class="text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       LOANS SECTION
+  ══════════════════════════════════════════ -->
+  <section class="loans" id="loans">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Loan Products</span>
+        <h2 class="section-title">Loans Designed Around<br>Your Needs</h2>
+        <p class="section-subtitle">Flexible loan products with transparent terms and fast processing to help you achieve your goals faster.</p>
+      </div>
+      <div class="loans-grid">
+
+            <div class="loan-card reveal" onclick="window.location.href='loans.html#mazao'" style="cursor:pointer">
+          <div class="loan-top-img"><img alt="Mazao Loan" src="loan.jpg"></div>
+          <h3>Mazao Loan</h3>
+
+          <p>Designed for members in agriculture to finance farming inputs, equipment, and seasonal needs.</p>
+          <span class="rate">Low interest rate</span>
+        </div>
+
+            <div class="loan-card reveal" onclick="window.location.href='loans.html#livestock'" style="cursor:pointer">
+          <div class="loan-top-img"><img alt="Livestock Loan" src="livestock.jpg"></div>
+          <h3>Livestock Loan</h3>
+
+          <p>Purchase or improve your livestock holdings with our flexible livestock financing product.</p>
+          <span class="rate">Flexible repayment</span>
+        </div>
+
+            <div class="loan-card reveal" onclick="window.location.href='loans.html#business'" style="cursor:pointer">
+          <div class="loan-top-img"><img alt="Livestock Loan" src="loan.jpg"></div>
+
+          <p>Capital to start, grow or stabilise your business. Competitive rates and extended repayment.</p>
+          <span class="rate">Up to KSh 5M</span>
+        </div>
+
+            <div class="loan-card reveal" onclick="window.location.href='loans.html#overdraft'" style="cursor:pointer">
+          <div class="loan-top-img"><img alt="Livestock Loan" src="business.jpg"></div>
+
+          <p>Access emergency business funds instantly. Repay as your cash flow improves.</p>
+          <span class="rate">On-demand credit</span>
+        </div>
+
+            <div class="loan-card reveal" onclick="window.location.href='loans.html#salary'" style="cursor:pointer">
+          <div class="loan-top-img"><img alt="Livestock Loan" src="salary.jpg"></div>
+          <h3>Salary Advance</h3>
+
+          <p>Fast salary advance for employed members. Access up to 3 months salary within hours.</p>
+          <span class="rate">Same day approval</span>
+        </div>
+
+            <div class="loan-card reveal" onclick="window.location.href='loans.html#jiunge'" style="cursor:pointer">
+          <div class="loan-top-img"><img alt="Livestock Loan" src="mapato.jpg"></div>
+          <h3>Jiunge na Mapato</h3>
+
+          <p>A unique income-generating loan for members who want to invest and earn regular returns.</p>
+          <span class="rate">Earn while repaying</span>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="loans.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--green);color:white;padding:13px 26px;border-radius:50px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.25s" onmouseover="this.style.background='var(--green-dark)'" onmouseout="this.style.background='var(--green)'">View All Loan Products →</a>
+        <a href="loan-application.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:700;font-size:0.9rem;text-decoration:none;border:2px solid var(--green);padding:13px 26px;border-radius:50px;transition:all 0.25s" onmouseover="this.style.background='var(--green)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--green)'">📋 Apply for a Loan →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SAVINGS SECTION
+  ══════════════════════════════════════════ -->
+  <section class="savings" id="savings">
+    <div class="container">
+      <div class="savings-wrap">
+
+        <div class="reveal">
+          <span class="section-tag">Savings &amp; Accounts</span>
+          <h2 class="section-title">Save Smart,<br>Grow Faster</h2>
+          <p class="section-subtitle" style="margin-bottom: 32px;">Multiple savings accounts tailored to every goal and lifestyle.</p>
+          <div class="savings-list">
+
+            <div class="savings-item active" data-savings="current">
+              <div class="savings-top-img"><img alt="Current Account" src="account.jpg"></div>
+              <div>
+                <h4>Current Account</h4>
+
+                <p>Ideal for business transactions. No withdrawal limits.</p>
+              </div>
+            </div>
+
+            <div class="savings-item" data-savings="savings">
+              <div class="savings-top-img"><img alt="Current Account" src="savings.jpg"></div>
+              <div>
+                <h4>Savings Account</h4>
+
+                <p>Everyday savings with competitive interest. Start from KSh 500.</p>
+              </div>
+            </div>
+
+            <div class="savings-item" data-savings="fixed">
+              <div class="savings-top-img"><img alt="Current Account" src="deposit.jpg"></div>
+              <div>
+                <h4>Fixed Deposit</h4>
+
+                <p>Lock-in your savings for 3–12 months and earn up to 8.5% P.A.</p>
+              </div>
+            </div>
+
+            <div class="savings-item" data-savings="akiba">
+              <div class="savings-top-img"><img alt="Current Account" src="akiba.jpg"></div>
+              <div>
+                <h4>Akiba Account</h4>
+
+                <p>Goal-based savings. Save for holidays, school fees, or projects.</p>
+              </div>
+            </div>
+
+            <div class="savings-item" data-savings="corporate">
+              <div class="savings-top-img"><img alt="Current Account" src="account.jpg"></div>
+                <h4>Corporate Account</h4>
+
+                <p>For organisations, welfare groups, schools, churches and hospitals.</p>
+              </div>
+            </div>
+
+          </div>
+          <div style="margin-top:24px">
+            <a href="savings.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:700;font-size:0.9rem;text-decoration:none">Explore All Savings Accounts →</a>
+          </div>
+        </div>
+
+        <!-- Savings Highlight Panel — updated dynamically by main.js -->
+        <div class="savings-highlight reveal" id="savingsHighlight">
+          <h3>Current Account</h3>
+          <p>Ideal for business transactions and personal use. Enjoy no withdrawal limits, free cheque clearing, and produce/salary processing.</p>
+          <ul class="savings-table">
+            <li><span>Withdrawal Limits</span><strong>None</strong></li>
+            <li><span>Minimum Balance</span><strong>KSh 1,000</strong></li>
+            <li><span>Cheque Clearing</span><strong>Free</strong></li>
+            <li><span>Internet Banking</span><strong>Included</strong></li>
+          </ul>
+          <a href="membership.html" class="btn-green">Open a Current Account →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       NEWS SECTION
+  ══════════════════════════════════════════ -->
+  <section class="news" id="news" style="padding:90px 0;background:var(--off-white)">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Latest News</span>
+        <h2 class="section-title">News &amp; Updates</h2>
+        <p class="section-subtitle">Stay informed about our products, services, and community initiatives.</p>
+      </div>
+      <div class="news-grid">
+
+        <div class="news-card reveal" onclick="window.location.href='news.html'" style="cursor:pointer">
+          <div class="news-img"><img alt="Announcement" src="announcement.jpg"></div>
+          <div class="news-body">
+
+            <div class="news-tag">Announcement</div>
+            <h3>Ridgeways Finance 2025 AGM — Members Invited</h3>
+            <p>We are pleased to invite all members to our 2025 Annual General Meeting to discuss financial performance, elect officials, and plan for the future.</p>
+            <div class="news-meta">
+              <span>📅 May 2025</span>
+              <span>👤 Board of Directors</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card reveal" onclick="window.location.href='news.html'" style="cursor:pointer">
+          <div class="news-img"><img alt="Mobile App" src="mobile.jpg"></div>
+          <div class="news-body">
+
+            <div class="news-tag">Product Launch</div>
+            <h3>New Mobile App Now Available on Android &amp; iOS</h3>
+            <p>We have launched our upgraded mobile banking app to enhance members' convenience. Dial *288# or download the Ridgeways Finance App today.</p>
+            <div class="news-meta">
+              <span>📅 March 2025</span>
+              <span>👤 IT Department</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card reveal" onclick="window.location.href='news.html'" style="cursor:pointer">
+          <div class="news-img"><img alt="Diaspora" src="diaspora.jpg"></div>
+          <div class="news-body">
+
+            <div class="news-tag">Membership</div>
+            <h3>Diaspora Membership Recruitment Now Open</h3>
+            <p>Ridgeways Finance is accepting new Diaspora member applications. If you live outside Kenya and wish to join, apply today with proof of residency.</p>
+            <div class="news-meta">
+              <span>📅 April 2025</span>
+              <span>👤 Membership Dept.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:40px">
+        <a href="news.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:700;font-size:0.95rem;text-decoration:none;border:2px solid var(--green);padding:12px 28px;border-radius:50px;transition:all 0.25s" onmouseover="this.style.background='var(--green)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--green)'">View All News &amp; Events →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       MEMBERSHIP CTA
+  ══════════════════════════════════════════ -->
+  <section class="membership-cta">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="section-tag">Membership</span>
+        <h2 class="section-title">Join Ridgeways Finance Today</h2>
+        <p class="section-subtitle">Membership is open to all Kenyan citizens — residents and Diaspora. Secure your financial future with a trusted and reputable partner.</p>
+        <div class="cta-buttons">
+          <a href="membership.html" class="btn-gold">🚀 Apply for Membership</a>
+          <a href="contact.html" class="btn-white-outline">📞 Talk to Us First</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PAYBILL / QUICK CONTACT BAR
+  ══════════════════════════════════════════ -->
+  <div class="paybill">
+    <div class="container">
+      <p>💳 Lipa na M-Pesa · Paybill: <strong>700288</strong></p>
+      <div class="divider"></div>
+      <p>📱 USSD Banking: <strong>*288#</strong></p>
+      <div class="divider"></div>
+      <p>📞 Helpline: <a href="tel:0700123456" style="color:var(--green-dark);font-weight:800;text-decoration:none">0700 123 456</a></p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">R</div>
+            <div class="logo-text">
+              <strong>Ridgeways Finance</strong>
+              <span style="color:var(--gold)">Your Financial Partner</span>
+            </div>
+          </a>
+          <p>Ridgeways Finance is a registered and regulated Sacco providing affordable financial solutions to members across Nairobi and beyond. Regulated by SASRA.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61572052684912" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/ridgeways_properties/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram / X">i</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">→ About Us</a></li>
+            <li><a href="membership.html">→ Membership</a></li>
+            <li><a href="loans.html">→ Loans</a></li>
+            <li><a href="savings.html">→ Savings</a></li>
+            <li><a href="digital-banking.html">→ Digital Banking</a></li>
+            <li><a href="news.html">→ News &amp; Events</a></li>
+            <li><a href="contact.html">→ Contact Us</a></li>
+            <li><a href="member-login.html">→ Member Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div>
+          <h4>Products</h4>
+          <ul>
+            <li><a href="loans.html#development">→ Development Loans</a></li>
+            <li><a href="loans.html#supersaver">→ Supersaver Loans</a></li>
+            <li><a href="assets.html">→ Asset Finance</a></li>
+            <li><a href="savings.html#fixed">→ Fixed Deposit</a></li>
+            <li><a href="savings.html#akiba">→ Akiba Savings</a></li>
+            <li><a href="savings.html#diaspora">→ Diaspora Account</a></li>
+            <li><a href="loans.html#business">→ Business Loans</a></li>
+            <li><a href="loan-application.html">→ Apply for a Loan</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>📍 <span>Ridgeways Finance House<br>Ridgeways Lane, Off Kiambu Road<br>Nairobi, Kenya</span></p>
+          <p>📞 <span><a href="tel:0700123456" style="color:white;text-decoration:none">0700 123 456</a><br><a href="tel:020400567" style="color:white;text-decoration:none">020 400 5678</a></span></p>
+          <p>✉️ <span><a href="mailto:info@ridgewaysfinance.co.ke" style="color:white;text-decoration:none">info@ridgewaysfinance.co.ke</a></span></p>
+          <p>🕐 <span>Mon–Fri: 8:00am – 5:00pm<br>Sat: 8:00am – 1:00pm</span></p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 Ridgeways Finance Sacco Society Limited. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="about.html#regulation">SASRA Regulated</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <script src="main.js"></script>
+  <script src="pages.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Ridgeways Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left"><span>📞 0700 123 456</span><span>✉️ info@ridgewaysfinance.co.ke</span></div>
+      <div><a href="member-login.html">Member Login</a><a href="member-login.html">Online Banking</a><a href="contact.html">Contact Us</a></div>
+    </div>
+  </div>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <nav id="mainNav">
+          <a href="loans.html">Loans</a>
+          <a href="savings.html">Savings</a>
+          <a href="digital-banking.html">Digital Banking</a>
+          <a href="about.html">About Us</a>
+          <a href="membership.html" class="nav-cta">Join Now →</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-circle"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Products</span></div>
+      <h1>Our <em>Financial</em> Products</h1>
+      <p>A complete suite of savings, loan, and investment products crafted to empower every member at every stage of their financial journey.</p>
+      <div class="page-hero-tags">
+        <span class="page-hero-tag">💰 Savings</span>
+        <span class="page-hero-tag">🏦 Loans</span>
+        <span class="page-hero-tag">📈 Investments</span>
+        <span class="page-hero-tag">🌍 Diaspora</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-body">
+    <div class="container">
+      <!-- TABS -->
+      <div class="tabs" id="productTabs">
+        <button class="tab-btn active" data-tab="all">All Products</button>
+        <button class="tab-btn" data-tab="savings">Savings</button>
+        <button class="tab-btn" data-tab="loans">Loans</button>
+        <button class="tab-btn" data-tab="investment">Investment</button>
+        <button class="tab-btn" data-tab="diaspora">Diaspora</button>
+      </div>
+
+      <!-- ALL / SAVINGS -->
+      <div class="tab-panel active" id="tab-all">
+        <div class="products-grid">
+          <div class="product-card reveal" data-category="loans">
+            <div class="product-top-img"><img alt="Development Loans" src="loan.jpg"></div>
+            <h3>Development Loans</h3>
+
+            <p>Finance personal or business development at competitive monthly rates with flexible repayment up to 48 months.</p>
+            <div class="product-rate">From 1% p.m.</div>
+            <a href="loans.html#development" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="loans">
+            <div class="product-top-img"><img alt="Supersaver Loans" src="loan.jpg"></div>
+            <h3>Supersaver Loans</h3>
+
+            <p>Instant credit secured against your savings. Access up to 3× your savings balance within minutes of application.</p>
+            <div class="product-rate">Instant approval</div>
+            <a href="loans.html#supersaver" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="loans">
+            <div class="product-top-img"><img alt="Development Loans" src="assets-finance.jpg"></div
+            <h3>Asset Finance</h3>
+
+            <p>Purchase land, residential property, motor vehicles, or business equipment with repayment up to 84 months.</p>
+            <div class="product-rate">Up to 84 months</div>
+            <a href="assets.html" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="diaspora">
+            <div class="product-top-img"><img alt="Diaspora Account" src="diaspora.jpg"></div>
+            <h3>Diaspora Account</h3>
+
+            <p>For Ridgeways Finance members abroad. Save, invest, and access loans from anywhere in the world.</p>
+            <div class="product-rate">8.5% P.A.</div>
+            <a href="savings.html#diaspora" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="investment">
+            <div class="product-top-img"><img alt="Fixed Deposit" src="deposit.jpg"></div>
+            <h3>Fixed Deposit</h3>
+
+            <p>Lock in your funds for 3–12 months and earn attractive returns. Ideal for surplus cash management.</p>
+            <div class="product-rate">Up to 8.5% P.A.</div>
+            <a href="savings.html#fixed" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="savings">
+            <div class="product-top-img"><img alt="Development Loans" src="akiba.jpg"></div>
+
+            <p>Goal-based savings for holidays, school fees, weddings, or any project. Earn interest while you save.</p>
+            <div class="product-rate">Up to 7% P.A.</div>
+            <a href="savings.html#akiba" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="savings">
+            <div class="product-top-img"><img alt="Corporate Account" src="co-operate.jpg"></div>
+            <h3>Corporate Account</h3>
+
+            <p>Designed for organisations, welfare groups, schools, hospitals, and churches. Bulk payment facilities available.</p>
+            <div class="product-rate">Multi-signatory</div>
+            <a href="savings.html#corporate" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="loans">
+            <div class="product-top-img"><img alt="Development Loans" src="loan.jpg"></div>
+            <h3>Business Loans</h3>
+
+            <p>Capital to start, stabilise, or grow your business. Structured repayment to match your cash flow cycle.</p>
+            <div class="product-rate">Up to KSh 5M</div>
+            <a href="loans.html#business" class="product-link">Learn more →</a>
+          </div>
+          <div class="product-card reveal" data-category="loans">
+            <div class="product-top-img"><img alt="Mazao / Livestock Loans" src="livestock.jpg"></div>
+            <h3>Mazao / Livestock Loans</h3>
+
+            <p>Agri-focused financing for farming inputs, equipment purchases, and livestock acquisition or improvement.</p>
+            <div class="product-rate">Flexible terms</div>
+            <a href="loans.html#mazao" class="product-link">Learn more →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-savings">
+        <div class="products-grid">
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Akiba Savings" src="akiba.jpg"></div><h3>Akiba Savings</h3><p>Goal-based savings. Earn competitive interest while building healthy saving habits.</p><div class="product-rate">Up to 7% P.A.</div><a href="savings.html#akiba" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Current Account" src="account.jpg"></div><h3>Current Account</h3><p>Flexible day-to-day account with no withdrawal limits and free cheque clearing.</p><div class="product-rate">No limits</div><a href="savings.html#current" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Savings Account" src="savings.jpg"></div><h3>Savings Account</h3><p>Standard savings with competitive interest. Start with as little as KSh 500.</p><div class="product-rate">5% P.A.</div><a href="savings.html#savings" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Corporate Account" src="co-operate.jpg"></div><h3>Corporate Account</h3><p>For institutions — schools, welfare groups, hospitals, and churches.</p><div class="product-rate">Multi-signatory</div><a href="savings.html#corporate" class="product-link">Learn more →</a></div>
+
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-loans">
+        <div class="products-grid">
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Development Loans" src="loan.jpg"></div><h3>Development Loans</h3><p>Personal and business development financing at low monthly rates.</p><div class="product-rate">From 1% p.m.</div><a href="loans.html#development" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Supersaver Loans" src="loan.jpg"></div><h3>Supersaver Loans</h3><p>Instant credit up to 3× savings balance. No lengthy approval process.</p><div class="product-rate">Instant</div><a href="loans.html#supersaver" class="product-link">Learn more →</a></div>
+
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Business Loans" src="busi bank.jpg"></div><h3>Business Loans</h3><p>Up to KSh 5M to grow your enterprise with extended repayment periods.</p><div class="product-rate">Up to KSh 5M</div><a href="loans.html#business" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Business Overdraft" src="overdraft.jpg"></div><h3>Business Overdraft</h3><p>On-demand emergency credit that adjusts to your business cash flow.</p><div class="product-rate">On-demand</div><a href="loans.html#overdraft" class="product-link">Learn more →</a></div>
+
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Salary Advance" src="salary.jpg"></div><h3>Salary Advance</h3><p>Access up to 3 months salary instantly. Same-day approval for qualifying members.</p><div class="product-rate">Same day</div><a href="loans.html#salary" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Mazao Loan" src="loan.jpg"></div><h3>Mazao Loan</h3><p>Agricultural financing for inputs, equipment, and seasonal farming needs.</p><div class="product-rate">Flexible</div><a href="loans.html#mazao" class="product-link">Learn more →</a></div>
+
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-investment">
+        <div class="products-grid">
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Fixed Deposit" src="deposit.jpg"></div><h3>Fixed Deposit</h3><p>3–12 month investment earning up to 8.5% P.A. Interest paid on maturity.</p><div class="product-rate">8.5% P.A.</div><a href="savings.html#fixed" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Jiunge na Mapato" src="mapato.jpg"></div><h3>Jiunge na Mapato</h3><p>A unique investment loan where you earn regular returns while repaying. Best of both worlds.</p><div class="product-rate">Earn while repaying</div><a href="loans.html#jiunge" class="product-link">Learn more →</a></div>
+          <div class="product-card reveal"><div class="product-top-img"><img alt="Asset Finance" src="assets-finance.jpg"></div><h3>Asset Finance</h3><p>Invest in property or equipment. Build real wealth with extended repayment periods.</p><div class="product-rate">Up to 84 months</div><a href="assets.html" class="product-link">Learn more →</a></div>
+
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-diaspora">
+        <div class="two-col" style="margin-top:0">
+          <div>
+            <span class="section-tag">Diaspora Banking</span>
+            <h2 class="section-title">Banking Without Borders</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:20px">Whether you're in the UK, USA, Canada, or anywhere else in the world, Ridgeways Finance keeps you connected to your financial home in Kenya.</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">🌍</div><div><h5>Global Access</h5><p>Manage your accounts, apply for loans, and send remittances online from anywhere.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">💱</div><div><h5>Multi-Currency Support</h5><p>Receive funds in USD, GBP, EUR and have them converted at competitive rates.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">📱</div><div><h5>Mobile & Web Banking</h5><p>Full-featured mobile app and web portal available 24/7 on any device.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🏠</div><div><h5>Property Investment Loans</h5><p>Finance land, building, or renovation projects in Kenya while living abroad.</p></div></div>
+            </div>
+          </div>
+          <div>
+            <div class="calculator">
+              <h3>💱 Remittance Calculator</h3>
+              <div class="form-group">
+                <label class="form-label">Amount to Send (USD)</label>
+                <input type="number" class="form-input" id="remitAmount" value="500" oninput="calcRemit()">
+              </div>
+              <div class="form-group">
+                <label class="form-label">From Currency</label>
+                <select class="form-select" id="remitCurrency" onchange="calcRemit()">
+                  <option value="130">USD (1 USD ≈ KSh 130)</option>
+                  <option value="165">GBP (1 GBP ≈ KSh 165)</option>
+                  <option value="140">EUR (1 EUR ≈ KSh 140)</option>
+                </select>
+              </div>
+              <div class="calc-result">
+                <div class="result-label">Recipient receives approximately</div>
+                <div class="result-value" id="remitResult">KSh 65,000</div>
+                <div class="calc-breakdown">
+                  <div class="calc-row"><span>Exchange Rate</span><strong id="remitRate">KSh 130</strong></div>
+                  <div class="calc-row"><span>Transfer Fee</span><strong>Free for members</strong></div>
+                  <div class="calc-row"><span>Processing Time</span><strong>Same day</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE TABLE -->
+  <section class="page-body-gray">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Compare</span>
+        <h2 class="section-title">Loan Products at a Glance</h2>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="rate-table reveal">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Max Amount</th>
+              <th>Interest Rate</th>
+              <th>Max Repayment</th>
+              <th>Processing Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Development Loan</strong></td><td>KSh 3M</td><td class="highlight">1% p.m.</td><td>48 months</td><td>3–5 days</td><td><a href="loans.html" style="color:var(--green);font-weight:700">Apply →</a></td></tr>
+            <tr><td><strong>Supersaver Loan</strong></td><td>3× Savings</td><td class="highlight">0.9% p.m.</td><td>12 months</td><td>Instant</td><td><a href="loans.html" style="color:var(--green);font-weight:700">Apply →</a></td></tr>
+            <tr><td><strong>Business Loan</strong></td><td>KSh 5M</td><td class="highlight">1.2% p.m.</td><td>60 months</td><td>5–7 days</td><td><a href="loans.html" style="color:var(--green);font-weight:700">Apply →</a></td></tr>
+            <tr><td><strong>Asset Finance</strong></td><td>KSh 10M</td><td class="highlight">1.1% p.m.</td><td>84 months</td><td>7–14 days</td><td><a href="assets.html" style="color:var(--green);font-weight:700">Apply →</a></td></tr>
+            <tr><td><strong>Salary Advance</strong></td><td>3× Net Salary</td><td class="highlight">1% p.m.</td><td>6 months</td><td>Same day</td><td><a href="loans.html" style="color:var(--green);font-weight:700">Apply →</a></td></tr>
+            <tr><td><strong>Mazao Loan</strong></td><td>KSh 500K</td><td class="highlight">0.8% p.m.</td><td>24 months</td><td>3–5 days</td><td><a href="loans.html" style="color:var(--green);font-weight:700">Apply →</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="membership-cta">
+    <div class="container"><div class="cta-inner reveal">
+      <span class="section-tag">Get Started</span>
+      <h2 class="section-title">Ready to Apply?</h2>
+      <p class="section-subtitle">Become a member today and access all our financial products with just one account.</p>
+      <div class="cta-buttons">
+        <a href="membership.html" class="btn-gold">🚀 Become a Member</a>
+        <a href="contact.html" class="btn-white-outline">📞 Speak to an Advisor</a>
+      </div>
+    </div></div>
+  </section>
+
+  <div class="paybill"><div class="container"><p>💳 Paybill: <strong>700288</strong></p><div class="divider"></div><p>📱 USSD: <strong>*288#</strong></p><div class="divider"></div><p>📞 <strong>0700 123 456</strong></p></div></div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><div class="logo-icon">R</div><div class="logo-text"><strong>Ridgeways Finance</strong><span style="color:var(--gold)">Your Financial Partner</span></div></a>
+          <p>Registered Sacco regulated by SASRA. Providing affordable financial solutions across Nairobi and beyond since 2008.</p>
+          <a href="https://www.facebook.com/profile.php?id=61572052684912" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/ridgeways_properties/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram / X">i</a>
+        </div>
+        <div><h4>Quick Links</h4><ul><li><a href="about.html">→ About Us</a></li><li><a href="membership.html">→ Membership</a></li><li><a href="loans.html">→ Loans</a></li><li><a href="savings.html">→ Savings</a></li><li><a href="digital-banking.html">→ Digital Banking</a></li><li><a href="news.html">→ News &amp; Events</a></li></ul></div>
+        <div><h4>Products</h4><ul><li><a href="loans.html">→ Development Loans</a></li><li><a href="loans.html">→ Supersaver Loans</a></li><li><a href="assets.html">→ Asset Finance</a></li><li><a href="savings.html">→ Fixed Deposit</a></li><li><a href="savings.html">→ Akiba Savings</a></li><li><a href="savings.html">→ Diaspora Account</a></li></ul></div>
+        <div class="footer-contact"><h4>Contact Us</h4><p>📍 <span>Ridgeways Finance House<br>Ridgeways, Nairobi</span></p><p>📞 <span>0700 123 456</span></p><p>✉️ <span>info@ridgewaysfinance.co.ke</span></p><p>🕐 <span>Mon–Fri: 8am–5pm · Sat: 8am–1pm</span></p></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Ridgeways Finance Sacco Society Limited. All rights reserved.</p><div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="#">SASRA Regulated</a></div></div>
+    </div>
+  </footer>
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  <script src="main.js"></script>
+  <script src="pages.js"></script>
+  <script>
+    function calcRemit() {
+      const amt = parseFloat(document.getElementById('remitAmount').value) || 0;
+      const rate = parseFloat(document.getElementById('remitCurrency').value);
+      document.getElementById('remitResult').textContent = 'KSh ' + (amt * rate).toLocaleString();
+      document.getElementById('remitRate').textContent = 'KSh ' + rate;
+    }
+  </script>
+</body>
+</html>

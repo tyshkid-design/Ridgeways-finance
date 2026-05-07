@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard | Ridgeways Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="topbar"><div class="container"><div class="topbar-left"><span>📞 0700 123 456</span><span>✉️ info@ridgewaysfinance.co.ke</span></div><div><a href="index.html">← Public Website</a></div></div></div>
+  <header><div class="container"><div class="header-inner">
+     <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+    <div style="display:flex;align-items:center;gap:16px">
+      <span style="font-size:0.85rem;color:var(--gray)">Welcome, <strong style="color:var(--green)">John Kamau</strong></span>
+      <span style="background:var(--green-light);color:var(--green);font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:50px">RF-2024-001234</span>
+      <a href="member-login.html" style="color:var(--gray);font-size:0.82rem;text-decoration:none">Logout</a>
+    </div>
+  </div></div></header>
+
+  <section style="padding:40px 0;background:var(--off-white);min-height:80vh">
+    <div class="container">
+      <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <div class="dashboard-sidebar">
+          <div class="d-profile">
+            <div class="d-avatar">JK</div>
+            <div class="d-profile-info">
+              <strong>John Kamau</strong>
+              <span>RF-2024-001234</span>
+            </div>
+          </div>
+          <nav>
+            <a href="#overview" class="active"><span class="d-icon">🏠</span> Overview</a>
+            <a href="#accounts"><span class="d-icon">🏦</span> My Accounts</a>
+            <a href="#loans"><span class="d-icon">💰</span> My Loans</a>
+            <a href="#transactions"><span class="d-icon">🔄</span> Transactions</a>
+            <a href="#transfer"><span class="d-icon">📤</span> Transfer Funds</a>
+            <a href="#statements"><span class="d-icon">📄</span> Statements</a>
+            <a href="loan-application.html"><span class="d-icon">📋</span> Apply for Loan</a>
+            <a href="#profile"><span class="d-icon">👤</span> My Profile</a>
+            <a href="contact.html"><span class="d-icon">💬</span> Support</a>
+          </nav>
+          <div class="d-logout">
+            <a href="member-login.html">🚪 Logout</a>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="dashboard-content" id="overview">
+
+          <!-- Greeting -->
+          <div class="dashboard-greeting">
+            <h2>Good Morning, John! 👋</h2>
+            <p>Here's a summary of your accounts as of Thursday, 7 May 2025</p>
+          </div>
+
+          <!-- Account Cards -->
+          <div>
+            <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;margin-bottom:16px">My Accounts</h3>
+            <div class="account-cards" id="accounts">
+              <div class="account-card">
+                <div class="ac-type">💰 Savings Account</div>
+                <div class="ac-balance">KSh 84,200</div>
+                <div class="ac-label">Available Balance</div>
+                <div style="margin-top:12px;display:flex;gap:8px">
+                  <button class="btn-sm btn-sm-green" onclick="showTransfer('savings')">Withdraw</button>
+                  <button class="btn-sm btn-sm-outline" onclick="showDeposit()">Deposit</button>
+                </div>
+              </div>
+              <div class="account-card">
+                <div class="ac-type">🏦 Share Capital</div>
+                <div class="ac-balance">KSh 32,000</div>
+                <div class="ac-label">Total Shares</div>
+                <div style="margin-top:12px"><span style="font-size:0.77rem;color:var(--green);background:var(--green-light);padding:3px 10px;border-radius:50px;font-weight:700">Dividend Eligible</span></div>
+              </div>
+              <div class="account-card">
+                <div class="ac-type">📆 Fixed Deposit</div>
+                <div class="ac-balance">KSh 200,000</div>
+                <div class="ac-label">Matures: Aug 2025</div>
+                <div style="margin-top:12px"><span style="font-size:0.77rem;color:var(--gold);background:var(--gold-light);padding:3px 10px;border-radius:50px;font-weight:700">8.5% P.A.</span></div>
+              </div>
+              <div class="account-card" style="background:linear-gradient(135deg,var(--green-dark),var(--green));color:white;border:none">
+                <div class="ac-type" style="color:rgba(255,255,255,0.65)">💳 Loan Outstanding</div>
+                <div class="ac-balance" style="color:var(--gold)">KSh 120,000</div>
+                <div class="ac-label" style="color:rgba(255,255,255,0.65)">Next due: 31 May 2025</div>
+                <div style="margin-top:12px"><button class="btn-sm" style="background:var(--gold);color:var(--green-dark);border:none;padding:6px 14px;border-radius:50px;font-size:0.78rem;font-weight:700;cursor:pointer" onclick="showRepay()">Repay Now</button></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div>
+            <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;margin-bottom:16px">Quick Actions</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px">
+              <div class="card" style="text-align:center;padding:20px;cursor:pointer" onclick="showTransfer()" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="font-size:1.6rem;margin-bottom:8px">📤</div>
+                <h4 style="font-size:0.85rem;font-weight:700">Transfer Funds</h4>
+              </div>
+              <div class="card" style="text-align:center;padding:20px;cursor:pointer" onclick="showDeposit()" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="font-size:1.6rem;margin-bottom:8px">📥</div>
+                <h4 style="font-size:0.85rem;font-weight:700">Deposit</h4>
+              </div>
+              <a href="loan-application.html" style="text-decoration:none"><div class="card" style="text-align:center;padding:20px;cursor:pointer" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="font-size:1.6rem;margin-bottom:8px">📋</div>
+                <h4 style="font-size:0.85rem;font-weight:700">Apply Loan</h4>
+              </div></a>
+              <div class="card" style="text-align:center;padding:20px;cursor:pointer" onclick="downloadStatement()" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="font-size:1.6rem;margin-bottom:8px">📄</div>
+                <h4 style="font-size:0.85rem;font-weight:700">Statement</h4>
+              </div>
+              <div class="card" style="text-align:center;padding:20px;cursor:pointer" onclick="showPayBill()" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="font-size:1.6rem;margin-bottom:8px">🧾</div>
+                <h4 style="font-size:0.85rem;font-weight:700">Pay Bills</h4>
+              </div>
+              <a href="contact.html" style="text-decoration:none"><div class="card" style="text-align:center;padding:20px;cursor:pointer" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+                <div style="font-size:1.6rem;margin-bottom:8px">💬</div>
+                <h4 style="font-size:0.85rem;font-weight:700">Support</h4>
+              </div></a>
+            </div>
+          </div>
+
+          <!-- Loan Summary -->
+          <div id="loans">
+            <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;margin-bottom:16px">Active Loans</h3>
+            <div class="card" style="padding:0;overflow:hidden">
+              <div style="overflow-x:auto">
+                <table class="rate-table" style="margin:0">
+                  <thead><tr><th>Loan Type</th><th>Amount</th><th>Outstanding</th><th>Monthly</th><th>Next Due</th><th>Status</th><th></th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Development Loan</strong></td>
+                      <td>KSh 300,000</td>
+                      <td class="highlight">KSh 120,000</td>
+                      <td>KSh 8,500</td>
+                      <td>31 May 2025</td>
+                      <td><span style="background:#dcfce7;color:#16a34a;font-size:0.75rem;font-weight:700;padding:3px 10px;border-radius:50px">Active</span></td>
+                      <td><button class="btn-sm btn-sm-outline" onclick="showRepay()">Repay</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div style="text-align:center;margin-top:16px">
+              <a href="loan-application.html" style="color:var(--green);font-weight:700;font-size:0.88rem;text-decoration:none">+ Apply for Another Loan →</a>
+            </div>
+          </div>
+
+          <!-- Recent Transactions -->
+          <div id="transactions">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+              <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem">Recent Transactions</h3>
+              <button class="btn-sm btn-sm-outline" onclick="downloadStatement()">Download All</button>
+            </div>
+            <div class="card" style="padding:8px 20px">
+              <div class="tx-list">
+                <div class="tx-item">
+                  <div class="tx-icon credit">📥</div>
+                  <div class="tx-info"><strong>M-Pesa Deposit</strong><span>02 May 2025 · 10:24 AM</span></div>
+                  <div class="tx-amount credit">+KSh 5,000</div>
+                </div>
+                <div class="tx-item">
+                  <div class="tx-icon debit">📤</div>
+                  <div class="tx-info"><strong>Loan Repayment</strong><span>01 May 2025 · 08:00 AM</span></div>
+                  <div class="tx-amount debit">-KSh 8,500</div>
+                </div>
+                <div class="tx-item">
+                  <div class="tx-icon credit">📥</div>
+                  <div class="tx-info"><strong>Salary Deposit</strong><span>30 Apr 2025 · 11:15 AM</span></div>
+                  <div class="tx-amount credit">+KSh 85,000</div>
+                </div>
+                <div class="tx-item">
+                  <div class="tx-icon debit">🧾</div>
+                  <div class="tx-info"><strong>KPLC Bill Payment</strong><span>28 Apr 2025 · 02:30 PM</span></div>
+                  <div class="tx-amount debit">-KSh 3,200</div>
+                </div>
+                <div class="tx-item">
+                  <div class="tx-icon credit">💰</div>
+                  <div class="tx-info"><strong>Supersaver Loan Disbursement</strong><span>25 Apr 2025 · 09:00 AM</span></div>
+                  <div class="tx-amount credit">+KSh 50,000</div>
+                </div>
+                <div class="tx-item">
+                  <div class="tx-icon debit">📤</div>
+                  <div class="tx-info"><strong>Transfer to Equity Bank</strong><span>22 Apr 2025 · 04:10 PM</span></div>
+                  <div class="tx-amount debit">-KSh 12,000</div>
+                </div>
+                <div class="tx-item">
+                  <div class="tx-icon credit">📥</div>
+                  <div class="tx-info"><strong>Monthly Savings Contribution</strong><span>01 Apr 2025 · 08:05 AM</span></div>
+                  <div class="tx-amount credit">+KSh 5,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transfer Modal (inline) -->
+          <div id="transferSection" class="card" style="display:none;border-top:4px solid var(--green)" id="transfer">
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;margin-bottom:20px">📤 Transfer Funds</h3>
+            <div class="form-group"><label class="form-label">From Account</label><select class="form-select"><option>Savings Account (KSh 84,200)</option><option>Share Capital</option></select></div>
+            <div class="form-group"><label class="form-label">Transfer To</label><select class="form-select"><option>M-Pesa (My Number)</option><option>Equity Bank Account</option><option>KCB Account</option><option>Another RF Member</option></select></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Amount (KSh)</label><input type="number" class="form-input" placeholder="5000"></div>
+              <div class="form-group"><label class="form-label">Reference / Narration</label><input type="text" class="form-input" placeholder="Rent payment"></div>
+            </div>
+            <div class="form-group"><label class="form-label">Transaction PIN</label><input type="password" class="form-input" placeholder="Enter 4-digit PIN" maxlength="4"></div>
+            <div style="display:flex;gap:12px">
+              <button class="btn-full" style="background:var(--off-white);color:var(--dark);border:1.5px solid var(--border)" onclick="document.getElementById('transferSection').style.display='none'">Cancel</button>
+              <button class="btn-full btn-full-green" onclick="processTransfer()">Confirm Transfer</button>
+            </div>
+            <div id="transferSuccess" class="alert alert-green" style="display:none;margin-top:16px"><span class="alert-icon">✅</span><div>Transfer successful! SMS confirmation sent to your phone.</div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+  <script>
+    function showTransfer() {
+      const s = document.getElementById('transferSection');
+      s.style.display = s.style.display === 'none' ? 'block' : 'none';
+      if (s.style.display === 'block') s.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+    function showDeposit() {
+      alert('📱 To deposit funds, use M-Pesa Paybill: 700288\nAccount Number: Your member number\n\nFunds are credited instantly.');
+    }
+    function showRepay() {
+      alert('📱 To repay your loan, use M-Pesa Paybill: 700288\nAccount Number: LOAN-RF-2024-001234\n\nOr use the Transfer Funds option above.');
+    }
+    function showPayBill() {
+      alert('Bill payment is available on the Ridgeways Finance mobile app and via USSD *288# → Pay Bills.');
+    }
+    function downloadStatement() {
+      alert('📄 Your account statement for the last 3 months will be emailed to john@example.com within a few minutes.');
+    }
+    function processTransfer() {
+      document.getElementById('transferSuccess').style.display = 'flex';
+      setTimeout(() => { document.getElementById('transferSection').style.display = 'none'; }, 2500);
+    }
+
+    // Highlight active nav item based on scroll
+    document.querySelectorAll('.dashboard-sidebar nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.dashboard-sidebar nav a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savings | Ridgeways Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="topbar"><div class="container"><div class="topbar-left"><span>📞 0700 123 456</span><span>✉️ info@ridgewaysfinance.co.ke</span></div><div><a href="member-login.html">Member Login</a><a href="contact.html">Contact Us</a></div></div></div>
+  <header><div class="container"><div class="header-inner">
+     <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <nav id="mainNav"><a href="products.html">Products</a><a href="loans.html">Loans</a><a href="savings.html" class="active">Savings</a><a href="digital-banking.html">Digital Banking</a><a href="about.html">About Us</a><a href="membership.html" class="nav-cta">Join Now →</a></nav>
+  </div></div></header>
+
+  <div class="page-hero">
+    <div class="page-hero-circle"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Savings</span></div>
+      <h1>Savings &amp; <em>Accounts</em></h1>
+      <p>Grow your wealth with our range of savings accounts — from everyday transactional accounts to high-yield fixed deposits and goal-based savings products.</p>
+      <div class="page-hero-tags">
+        <span class="page-hero-tag">💰 Up to 8.5% P.A.</span>
+        <span class="page-hero-tag">🛡️ SASRA Insured</span>
+        <span class="page-hero-tag">📱 Mobile Access</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCOUNTS OVERVIEW -->
+  <section class="page-body">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Accounts</span>
+        <h2 class="section-title">Choose Your Account</h2>
+        <p class="section-subtitle">All accounts come with free mobile banking, SMS alerts, and access to our full loan product range.</p>
+      </div>
+      <div class="tabs" id="savingsTabs">
+        <button class="tab-btn active" data-tab="current">🏦 Current</button>
+        <button class="tab-btn" data-tab="savings">💰 Savings</button>
+        <button class="tab-btn" data-tab="fixed">📆 Fixed Deposit</button>
+        <button class="tab-btn" data-tab="akiba">🌿 Akiba</button>
+        <button class="tab-btn" data-tab="diaspora">🌍 Diaspora</button>
+        <button class="tab-btn" data-tab="corporate">🏢 Corporate</button>
+      </div>
+
+      <!-- CURRENT -->
+      <div class="tab-panel active" id="tab-current">
+        <div class="two-col">
+          <div>
+            <span class="section-tag">Day-to-Day Banking</span>
+            <h2 class="section-title">Current Account</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">The most flexible account for everyday banking. No restrictions on withdrawals, free cheque clearing, and full digital banking access.</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">🔓</div><div><h5>Unlimited Withdrawals</h5><p>Access your funds anytime via branch, ATM, or mobile.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">📝</div><div><h5>Cheque Facility</h5><p>Free cheque book with free clearing for all cheques.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">📱</div><div><h5>Full Digital Access</h5><p>Manage your account 24/7 via the Ridgeways Finance App or *288#.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🏢</div><div><h5>Business Ready</h5><p>Ideal for sole traders, SMEs, and professionals managing regular cash flow.</p></div></div>
+            </div>
+          </div>
+          <div>
+            <div class="card" style="margin-bottom:20px">
+              <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:16px;color:var(--dark)">Account Summary</h4>
+              <table class="rate-table"><tbody>
+                <tr><td>Minimum Opening Balance</td><td class="highlight">KSh 1,000</td></tr>
+                <tr><td>Monthly Maintenance Fee</td><td class="highlight">Free</td></tr>
+                <tr><td>Withdrawal Limit</td><td class="highlight">None</td></tr>
+                <tr><td>Cheque Book</td><td class="highlight">Free</td></tr>
+                <tr><td>Internet Banking</td><td class="highlight">Included</td></tr>
+                <tr><td>SMS Alerts</td><td class="highlight">Free</td></tr>
+                <tr><td>Loan Access</td><td class="highlight">Yes (after 3 months)</td></tr>
+              </tbody></table>
+            </div>
+            <a href="membership.html" class="btn-green">Open a Current Account →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAVINGS -->
+      <div class="tab-panel" id="tab-savings">
+        <div class="two-col">
+          <div>
+            <span class="section-tag">Everyday Savings</span>
+            <h2 class="section-title">Savings Account</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">Our standard savings account combines ease of access with competitive interest. Start saving with as little as KSh 500 and watch your balance grow.</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">💹</div><div><h5>5% Interest P.A.</h5><p>Interest calculated daily and credited monthly to your account.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">📲</div><div><h5>Mobile Deposits</h5><p>Deposit via M-Pesa Paybill 700288 or bank transfer any time.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🎯</div><div><h5>Builds Loan Eligibility</h5><p>Regular saving increases your loan limit over time.</p></div></div>
+            </div>
+          </div>
+          <div>
+            <div class="card" style="margin-bottom:20px">
+              <table class="rate-table"><tbody>
+                <tr><td>Minimum Opening Balance</td><td class="highlight">KSh 500</td></tr>
+                <tr><td>Interest Rate</td><td class="highlight">5% P.A.</td></tr>
+                <tr><td>Interest Credited</td><td class="highlight">Monthly</td></tr>
+                <tr><td>Withdrawals</td><td class="highlight">Unlimited</td></tr>
+                <tr><td>Loan Multiplier</td><td class="highlight">Up to 3× savings</td></tr>
+              </tbody></table>
+            </div>
+            <a href="membership.html" class="btn-green">Open a Savings Account →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIXED DEPOSIT -->
+      <div class="tab-panel" id="tab-fixed">
+        <div class="two-col">
+          <div>
+            <span class="section-tag">High Yield</span>
+            <h2 class="section-title">Fixed Deposit Account</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">Maximize your returns by locking in your funds for a defined period. Perfect for surplus cash, inheritance, business reserves, or retirement savings.</p>
+            <div class="interest-rate" style="margin-bottom:24px">
+              <div class="rate-num">8.5%</div>
+              <div class="rate-label">Interest Per Annum — Paid on Maturity</div>
+            </div>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">🔒</div><div><h5>Capital Protection</h5><p>Your principal is fully protected for the duration of the deposit period.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🔁</div><div><h5>Auto-Renewal Option</h5><p>Opt to auto-renew on maturity — at the prevailing rate — without visiting a branch.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🏦</div><div><h5>Loan Collateral</h5><p>Use your fixed deposit as collateral to access a loan without breaking the deposit.</p></div></div>
+            </div>
+          </div>
+          <div>
+            <!-- FD Calculator -->
+            <div class="calculator">
+              <h3>📈 Fixed Deposit Calculator</h3>
+              <div class="form-group">
+                <label class="form-label">Deposit Amount (KSh)</label>
+                <input type="number" class="form-input" id="fdAmount" value="100000" oninput="calcFD()">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Period</label>
+                <select class="form-select" id="fdPeriod" onchange="calcFD()">
+                  <option value="3">3 Months</option>
+                  <option value="6">6 Months</option>
+                  <option value="9">9 Months</option>
+                  <option value="12" selected>12 Months</option>
+                </select>
+              </div>
+              <div class="calc-result">
+                <div class="result-label">Maturity Value</div>
+                <div class="result-value" id="fdMaturity">KSh 108,500</div>
+                <div class="calc-breakdown">
+                  <div class="calc-row"><span>Principal</span><strong id="fdPrincipal">KSh 100,000</strong></div>
+                  <div class="calc-row"><span>Interest Earned</span><strong id="fdInterest">KSh 8,500</strong></div>
+                  <div class="calc-row"><span>Annual Rate</span><strong>8.5%</strong></div>
+                </div>
+              </div>
+              <a href="membership.html" class="btn-green" style="margin-top:14px;display:block;text-align:center">Open Fixed Deposit →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AKIBA -->
+      <div class="tab-panel" id="tab-akiba">
+        <div class="two-col">
+          <div>
+            <span class="section-tag">Goal-Based Savings</span>
+            <h2 class="section-title">Akiba Savings Account</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">Save towards a specific goal — school fees, a holiday, a wedding, a car, or a business. Set your target, choose a timeframe, and let the interest do the work.</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">🎯</div><div><h5>Goal Setting</h5><p>Name your goal and set a target date. Track progress monthly via the app.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">📅</div><div><h5>Flexible Contributions</h5><p>Contribute as little as KSh 1,000 per month. Increase anytime.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">💹</div><div><h5>Up to 7% P.A.</h5><p>Higher rates for longer commitment periods.</p></div></div>
+            </div>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:16px">Akiba Rate Schedule</h4>
+            <table class="rate-table"><thead><tr><th>Period</th><th>Interest Rate</th></tr></thead>
+            <tbody>
+              <tr><td>6 months</td><td class="highlight">5.0% P.A.</td></tr>
+              <tr><td>12 months</td><td class="highlight">6.0% P.A.</td></tr>
+              <tr><td>18 months</td><td class="highlight">6.5% P.A.</td></tr>
+              <tr><td>24 months+</td><td class="highlight">7.0% P.A.</td></tr>
+            </tbody></table>
+            <div class="alert alert-gold" style="margin-top:16px"><span class="alert-icon">⚠️</span><div>Early withdrawal before the agreed period attracts a 2% penalty on interest earned.</div></div>
+            <a href="membership.html" class="btn-green" style="margin-top:14px;display:block;text-align:center">Start Saving →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIASPORA -->
+      <div class="tab-panel" id="tab-diaspora">
+        <div class="two-col">
+          <div>
+            <span class="section-tag">For Kenyans Abroad</span>
+            <h2 class="section-title">Diaspora Account</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">Stay connected to your financial roots in Kenya. Save, invest, borrow and remit funds seamlessly from anywhere in the world.</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">🌍</div><div><h5>Available Worldwide</h5><p>Open and manage your account 100% online from any country.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">💱</div><div><h5>Foreign Currency Deposits</h5><p>Accept USD, GBP, and EUR deposits at competitive exchange rates.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🏠</div><div><h5>Investment Loans</h5><p>Finance property, land, or business in Kenya while living abroad.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">👨‍👩‍👧</div><div><h5>Proxy Management</h5><p>Designate a trusted local representative to manage transactions on your behalf.</p></div></div>
+            </div>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:16px">Diaspora Account Details</h4>
+            <table class="rate-table"><tbody>
+              <tr><td>Interest Rate</td><td class="highlight">8.5% P.A.</td></tr>
+              <tr><td>Min. Monthly Contribution</td><td class="highlight">USD 50 equivalent</td></tr>
+              <tr><td>Accepted Currencies</td><td class="highlight">KSh, USD, GBP, EUR</td></tr>
+              <tr><td>Account Opening</td><td class="highlight">100% Online</td></tr>
+              <tr><td>Remittance Fee</td><td class="highlight">Free for members</td></tr>
+            </tbody></table>
+            <a href="membership.html" class="btn-green" style="margin-top:16px;display:block;text-align:center">Open Diaspora Account →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CORPORATE -->
+      <div class="tab-panel" id="tab-corporate">
+        <div class="two-col">
+          <div>
+            <span class="section-tag">Institutions &amp; Groups</span>
+            <h2 class="section-title">Corporate Account</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">Designed for welfare groups, companies, schools, hospitals, churches, and community organisations. Enjoy bulk payment facilities and dedicated relationship management.</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">✍️</div><div><h5>Multi-Signatory</h5><p>Require up to 3 signatories per transaction for full governance compliance.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">💳</div><div><h5>Bulk Payments</h5><p>Pay staff salaries, supplier invoices, and welfare contributions in bulk.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">📊</div><div><h5>Monthly Statements</h5><p>Detailed statements emailed automatically to all account administrators.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🧑‍💼</div><div><h5>Dedicated Manager</h5><p>Every corporate account is assigned a dedicated relationship officer.</p></div></div>
+            </div>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:16px">Who Qualifies?</h4>
+            <div class="feature-list">
+              <div class="feature-list-item"><div class="fi-icon">🏫</div><div><h5>Schools &amp; Colleges</h5><p>Manage fee collections, payroll, and supplier payments.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">⛪</div><div><h5>Churches &amp; Mosques</h5><div><p>Tithe, offering, and project fund management.</p></div></div></div>
+              <div class="feature-list-item"><div class="fi-icon">👥</div><div><h5>Welfare Groups &amp; Chamas</h5><p>Table banking, merry-go-rounds, and group savings.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🏥</div><div><h5>Clinics &amp; Hospitals</h5><p>Medical revenue management and staff payroll.</p></div></div>
+            </div>
+            <a href="contact.html" class="btn-green" style="margin-top:16px;display:block;text-align:center">Enquire Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVINGS TIPS -->
+  <section class="page-body-gray">
+    <div class="container">
+      <div class="section-header reveal"><span class="section-tag">Tips</span><h2 class="section-title">Smart Saving Habits</h2></div>
+      <div class="three-col">
+        <div class="card reveal"><div style="font-size:2rem;margin-bottom:14px">📅</div><h3 style="font-weight:700;margin-bottom:8px;font-size:1rem">Pay Yourself First</h3><p style="color:var(--gray);font-size:0.88rem;line-height:1.65">Set up an automatic monthly contribution on payday before spending on anything else. Even KSh 1,000 a month builds up over time.</p></div>
+        <div class="card reveal"><div style="font-size:2rem;margin-bottom:14px">🎯</div><h3 style="font-weight:700;margin-bottom:8px;font-size:1rem">Save With a Goal</h3><p style="color:var(--gray);font-size:0.88rem;line-height:1.65">Members with a named savings goal save 3× more than those without one. Use our Akiba account to tie your savings to a specific purpose.</p></div>
+        <div class="card reveal"><div style="font-size:2rem;margin-bottom:14px">📈</div><h3 style="font-weight:700;margin-bottom:8px;font-size:1rem">Let Interest Compound</h3><p style="color:var(--gray);font-size:0.88rem;line-height:1.65">Avoid premature withdrawals. Letting interest accumulate in your fixed deposit or savings account unlocks the power of compounding over time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="membership-cta"><div class="container"><div class="cta-inner reveal">
+    <span class="section-tag">Open an Account</span>
+    <h2 class="section-title">Start Saving Today</h2>
+    <p class="section-subtitle">Membership opens the door to all our savings products. Join in minutes online or at any branch.</p>
+    <div class="cta-buttons"><a href="membership.html" class="btn-gold">🚀 Become a Member</a><a href="contact.html" class="btn-white-outline">📞 Talk to Us</a></div>
+  </div></div></section>
+
+  <div class="paybill"><div class="container"><p>💳 Paybill: <strong>700288</strong></p><div class="divider"></div><p>📱 USSD: <strong>*288#</strong></p><div class="divider"></div><p>📞 <strong>0700 123 456</strong></p></div></div>
+  <footer><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">R</div><div class="logo-text"><strong>Ridgeways Finance</strong><span style="color:var(--gold)">Your Financial Partner</span></div></a><p>SASRA-regulated Sacco. Serving Nairobi since 2008.<a href="https://www.facebook.com/profile.php?id=61572052684912" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/ridgeways_properties/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram / X">i</a></p></div>
+    <div><h4>Quick Links</h4><ul><li><a href="about.html">→ About Us</a></li><li><a href="loans.html">→ Loans</a></li><li><a href="savings.html">→ Savings</a></li><li><a href="digital-banking.html">→ Digital Banking</a></li><li><a href="contact.html">→ Contact</a></li></ul></div>
+    <div><h4>Savings Products</h4><ul><li><a href="#current">→ Current Account</a></li><li><a href="#savings">→ Savings Account</a></li><li><a href="#fixed">→ Fixed Deposit</a></li><li><a href="#akiba">→ Akiba Account</a></li><li><a href="#diaspora">→ Diaspora Account</a></li></ul></div>
+    <div class="footer-contact"><h4>Contact Us</h4><p>📍 <span>Ridgeways, Nairobi</span></p><p>📞 <span>0700 123 456</span></p><p>✉️ <span>info@ridgewaysfinance.co.ke</span></p><p>🕐 <span>Mon–Sat: 8am–5pm</span></p></div>
+  </div><div class="footer-bottom"><p>© 2025 Ridgeways Finance Sacco Society Limited.</p><div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></div></footer>
+  <button id="backToTop">↑</button>
+  <script src="main.js"></script><script src="pages.js"></script>
+  <script>
+    function calcFD() {
+      const P = parseFloat(document.getElementById('fdAmount').value) || 0;
+      const months = parseInt(document.getElementById('fdPeriod').value);
+      const rate = 0.085;
+      const interest = P * rate * (months / 12);
+      const maturity = P + interest;
+      document.getElementById('fdMaturity').textContent = 'KSh ' + Math.round(maturity).toLocaleString();
+      document.getElementById('fdPrincipal').textContent = 'KSh ' + P.toLocaleString();
+      document.getElementById('fdInterest').textContent = 'KSh ' + Math.round(interest).toLocaleString();
+    }
+  </script>
+</body>
+</html>

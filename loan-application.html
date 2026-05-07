@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loan Application | Ridgeways Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="topbar"><div class="container"><div class="topbar-left"><span>📞 0700 123 456</span><span>✉️ info@ridgewaysfinance.co.ke</span></div><div><a href="member-login.html">Member Login</a><a href="contact.html">Contact Us</a></div></div></div>
+  <header><div class="container"><div class="header-inner">
+     <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <nav id="mainNav"><a href="index.html">Home</a><a href="products.html">Products</a><a href="loans.html" class="active">Loans</a><a href="savings.html">Savings</a><a href="digital-banking.html">Digital Banking</a><a href="about.html">About Us</a><a href="membership.html" class="nav-cta">Join Now →</a></nav>
+  </div></div></header>
+
+  <div class="page-hero" style="padding:50px 0 40px">
+    <div class="page-hero-circle"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><a href="loans.html">Loans</a><span class="sep">›</span><span>Apply</span></div>
+      <h1>Loan <em>Application</em></h1>
+      <p>Complete the form below. Applications are processed within 3–5 working days. Supersaver loans are processed same day.</p>
+    </div>
+  </div>
+
+  <section class="page-body">
+    <div class="container">
+      <div class="two-col" style="align-items:start">
+
+        <!-- FORM -->
+        <div class="reveal" style="grid-column:1 / span 1">
+          <div class="card" style="border-top:4px solid var(--green)">
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:6px">Loan Application Form</h3>
+            <p style="color:var(--gray);font-size:0.85rem;margin-bottom:24px">All fields marked <span style="color:#ef4444">*</span> are required.</p>
+
+            <!-- Progress -->
+            <div style="display:flex;gap:6px;margin-bottom:8px">
+              <div style="flex:1;height:4px;border-radius:4px;background:var(--green)" id="ls1"></div>
+              <div style="flex:1;height:4px;border-radius:4px;background:var(--border)" id="ls2"></div>
+              <div style="flex:1;height:4px;border-radius:4px;background:var(--border)" id="ls3"></div>
+              <div style="flex:1;height:4px;border-radius:4px;background:var(--border)" id="ls4"></div>
+            </div>
+            <p style="font-size:0.78rem;color:var(--gray);margin-bottom:24px" id="lStepLabel">Step 1 of 4 — Member Details</p>
+
+            <!-- STEP 1: Member Info -->
+            <div id="lStep1">
+              <div class="form-group"><label class="form-label">Member Number <span>*</span></label><input type="text" class="form-input" id="lMemberNo" placeholder="RF-2024-001234"></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">First Name <span>*</span></label><input type="text" class="form-input" id="lFname" placeholder="John"></div>
+                <div class="form-group"><label class="form-label">Last Name <span>*</span></label><input type="text" class="form-input" id="lLname" placeholder="Kamau"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">ID Number <span>*</span></label><input type="text" class="form-input" id="lId" placeholder="12345678"></div>
+                <div class="form-group"><label class="form-label">KRA PIN <span>*</span></label><input type="text" class="form-input" id="lKra" placeholder="A001234567B"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Phone Number <span>*</span></label><input type="tel" class="form-input" id="lPhone" placeholder="0712 345 678"></div>
+                <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" id="lEmail" placeholder="john@email.com"></div>
+              </div>
+              <button class="btn-full btn-full-green" onclick="lNext(2)">Continue →</button>
+            </div>
+
+            <!-- STEP 2: Loan Details -->
+            <div id="lStep2" style="display:none">
+              <div class="form-group">
+                <label class="form-label">Loan Product <span>*</span></label>
+                <select class="form-select" id="lProduct" onchange="updateLoanFields()">
+                  <option value="">Select loan type...</option>
+                  <option value="development">Development Loan</option>
+                  <option value="supersaver">Supersaver Loan</option>
+                  <option value="business">Business Loan</option>
+                  <option value="overdraft">Business Overdraft</option>
+                  <option value="salary">Salary Advance</option>
+                  <option value="mazao">Mazao / Agricultural Loan</option>
+                  <option value="livestock">Livestock Loan</option>
+                  <option value="asset">Asset Finance</option>
+                  <option value="jiunge">Jiunge na Mapato</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Loan Amount (KSh) <span>*</span></label><input type="number" class="form-input" id="lAmount" placeholder="200000" oninput="updateLoanSummary()"></div>
+                <div class="form-group"><label class="form-label">Repayment Period <span>*</span></label>
+                  <select class="form-select" id="lPeriod" onchange="updateLoanSummary()">
+                    <option value="">Select...</option>
+                    <option value="3">3 months</option>
+                    <option value="6">6 months</option>
+                    <option value="12">12 months</option>
+                    <option value="18">18 months</option>
+                    <option value="24">24 months</option>
+                    <option value="36">36 months</option>
+                    <option value="48">48 months</option>
+                    <option value="60">60 months</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group"><label class="form-label">Loan Purpose <span>*</span></label><textarea class="form-textarea" id="lPurpose" placeholder="Briefly describe what you will use the loan for..." style="min-height:80px"></textarea></div>
+              <div class="form-group"><label class="form-label">Preferred Disbursement Method <span>*</span></label>
+                <select class="form-select" id="lDisburse">
+                  <option value="">Select...</option>
+                  <option>RF Savings Account</option>
+                  <option>M-Pesa (registered number)</option>
+                  <option>Bank Transfer</option>
+                  <option>Direct to Supplier (Asset Finance)</option>
+                </select>
+              </div>
+              <!-- Live summary -->
+              <div id="loanSummaryBox" class="calc-result" style="display:none">
+                <div class="result-label">Estimated Monthly Repayment</div>
+                <div class="result-value" id="lSummaryMonthly">—</div>
+                <div class="calc-breakdown">
+                  <div class="calc-row"><span>Total Repayment</span><strong id="lSummaryTotal">—</strong></div>
+                  <div class="calc-row"><span>Total Interest</span><strong id="lSummaryInterest">—</strong></div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;margin-top:4px">
+                <button class="btn-full" style="background:var(--off-white);color:var(--dark);border:1.5px solid var(--border)" onclick="lNext(1)">← Back</button>
+                <button class="btn-full btn-full-green" onclick="lNext(3)">Continue →</button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Employment & Security -->
+            <div id="lStep3" style="display:none">
+              <div class="form-group"><label class="form-label">Employment Status <span>*</span></label>
+                <select class="form-select" id="lEmp">
+                  <option value="">Select...</option>
+                  <option>Employed (Private Sector)</option>
+                  <option>Employed (Government)</option>
+                  <option>Self-Employed</option>
+                  <option>Farmer</option>
+                  <option>Retired</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Employer / Business</label><input type="text" class="form-input" id="lEmployer" placeholder="ABC Ltd"></div>
+                <div class="form-group"><label class="form-label">Net Monthly Income (KSh) <span>*</span></label><input type="number" class="form-input" id="lIncome" placeholder="80000"></div>
+              </div>
+              <p class="form-section-title">Loan Security / Guarantors</p>
+              <div class="alert alert-gold"><span class="alert-icon">💡</span><div>For loans above KSh 500,000 you need at least 2 guarantors who are Ridgeways Finance members in good standing.</div></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Guarantor 1 — Member No.</label><input type="text" class="form-input" id="lg1no" placeholder="RF-2024-000100"></div>
+                <div class="form-group"><label class="form-label">Guarantor 1 — Phone</label><input type="tel" class="form-input" id="lg1ph" placeholder="0712 000 001"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Guarantor 2 — Member No.</label><input type="text" class="form-input" id="lg2no" placeholder="RF-2024-000200"></div>
+                <div class="form-group"><label class="form-label">Guarantor 2 — Phone</label><input type="tel" class="form-input" id="lg2ph" placeholder="0712 000 002"></div>
+              </div>
+              <div style="display:flex;gap:12px">
+                <button class="btn-full" style="background:var(--off-white);color:var(--dark);border:1.5px solid var(--border)" onclick="lNext(2)">← Back</button>
+                <button class="btn-full btn-full-green" onclick="lNext(4)">Continue →</button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Documents & Declaration -->
+            <div id="lStep4" style="display:none">
+              <p class="form-section-title">Supporting Documents</p>
+              <div class="form-group"><label class="form-label">National ID (front &amp; back) <span>*</span></label><input type="file" class="form-input" accept=".pdf,.jpg,.png"></div>
+              <div class="form-group"><label class="form-label">Last 3 Months Payslips / Bank Statement <span>*</span></label><input type="file" class="form-input" accept=".pdf,.jpg,.png"></div>
+              <div class="form-group"><label class="form-label">Business Certificate (if applicable)</label><input type="file" class="form-input" accept=".pdf,.jpg,.png"></div>
+              <div class="form-group"><label class="form-label">Any other supporting document</label><input type="file" class="form-input" accept=".pdf,.jpg,.png"></div>
+
+              <p class="form-section-title">Declaration</p>
+              <div class="form-group">
+                <label style="display:flex;align-items:flex-start;gap:10px;font-size:0.85rem;color:var(--gray);cursor:pointer">
+                  <input type="checkbox" id="lDeclare" style="accent-color:var(--green);margin-top:3px">
+                  I declare that the information provided in this application is true and accurate. I understand that providing false information is grounds for rejection and may result in legal action.
+                </label>
+              </div>
+              <div class="form-group">
+                <label style="display:flex;align-items:flex-start;gap:10px;font-size:0.85rem;color:var(--gray);cursor:pointer">
+                  <input type="checkbox" id="lTerms" style="accent-color:var(--green);margin-top:3px">
+                  I agree to the <a href="terms.html" style="color:var(--green);font-weight:600">Loan Terms &amp; Conditions</a>.
+                </label>
+              </div>
+
+              <div id="lAppSuccess" class="alert alert-green" style="display:none"><span class="alert-icon">🎉</span><div><strong>Application Submitted!</strong> Reference: <strong id="lRefNo">RF-LN-2025-XXXXX</strong>. We'll contact you within 3–5 working days.</div></div>
+
+              <div style="display:flex;gap:12px">
+                <button class="btn-full" style="background:var(--off-white);color:var(--dark);border:1.5px solid var(--border)" onclick="lNext(3)">← Back</button>
+                <button class="btn-full btn-full-gold" id="lSubmitBtn" onclick="submitLoan()">Submit Application 🚀</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIDEBAR INFO -->
+        <div>
+          <div class="sidebar-nav reveal" style="margin-bottom:24px">
+            <div class="sidebar-nav-title">Loan Products</div>
+            <ul>
+              <li><a href="loans.html#development">💰 Development Loan</a></li>
+              <li><a href="loans.html#supersaver">⚡ Supersaver Loan</a></li>
+              <li><a href="loans.html#business">💼 Business Loan</a></li>
+              <li><a href="loans.html#salary">💵 Salary Advance</a></li>
+              <li><a href="assets.html">🏠 Asset Finance</a></li>
+              <li><a href="loans.html#mazao">🌾 Mazao Loan</a></li>
+            </ul>
+            <div class="sidebar-cta">
+              <p>Need help with your application?</p>
+              <a href="contact.html">Contact a Loan Advisor →</a>
+            </div>
+          </div>
+
+          <div class="card reveal" style="border-left:4px solid var(--gold)">
+            <h4 style="font-weight:700;margin-bottom:12px;font-size:0.95rem">⚡ Quick Loan via USSD</h4>
+            <p style="color:var(--gray);font-size:0.85rem;line-height:1.65;margin-bottom:14px">Need a Supersaver loan right now? Skip the form — dial <strong style="color:var(--green)">*288#</strong> and apply in under 5 minutes.</p>
+            <div class="steps">
+              <div class="step-item"><div class="step-num" style="width:28px;height:28px;font-size:0.75rem">1</div><div class="step-body" style="padding-bottom:18px"><h4 style="font-size:0.85rem">Dial *288#</h4></div></div>
+              <div class="step-item"><div class="step-num" style="width:28px;height:28px;font-size:0.75rem">2</div><div class="step-body" style="padding-bottom:18px"><h4 style="font-size:0.85rem">Select "Apply for Loan"</h4></div></div>
+              <div class="step-item"><div class="step-num" style="width:28px;height:28px;font-size:0.75rem">3</div><div class="step-body" style="padding-bottom:0"><h4 style="font-size:0.85rem">Confirm with your PIN</h4></div></div>
+            </div>
+          </div>
+
+          <div class="alert alert-green reveal" style="margin-top:20px">
+            <span class="alert-icon">✅</span>
+            <div><strong>Already applied?</strong> Track your application status by logging into <a href="member-login.html" style="color:var(--green);font-weight:700">your dashboard</a> or call 0700 123 456.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="paybill"><div class="container"><p>💳 Paybill: <strong>700288</strong></p><div class="divider"></div><p>📱 USSD: <strong>*288#</strong></p><div class="divider"></div><p>📞 <strong>0700 123 456</strong></p></div></div>
+  <footer><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">R</div><div class="logo-text"><strong>Ridgeways Finance</strong><span style="color:var(--gold)">Your Financial Partner</span></div></a><p>SASRA-regulated Sacco. Serving Nairobi since 2008.<a href="https://www.facebook.com/profile.php?id=61572052684912" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/ridgeways_properties/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram / X">i</a></p></div>
+    <div><h4>Quick Links</h4><ul><li><a href="loans.html">→ All Loans</a></li><li><a href="assets.html">→ Asset Finance</a></li><li><a href="savings.html">→ Savings</a></li><li><a href="contact.html">→ Contact</a></li></ul></div>
+    <div><h4>Loan Products</h4><ul><li><a href="loans.html#development">→ Development Loan</a></li><li><a href="loans.html#supersaver">→ Supersaver</a></li><li><a href="loans.html#business">→ Business Loan</a></li><li><a href="loans.html#salary">→ Salary Advance</a></li></ul></div>
+    <div class="footer-contact"><h4>Contact Us</h4><p>📍 <span>Ridgeways, Nairobi</span></p><p>📞 <span>0700 123 456</span></p><p>✉️ <span>loans@ridgewaysfinance.co.ke</span></p><p>🕐 <span>Mon–Sat: 8am–5pm</span></p></div>
+  </div><div class="footer-bottom"><p>© 2025 Ridgeways Finance Sacco Society Limited.</p><div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></div></footer>
+  <button id="backToTop">↑</button>
+  <script src="main.js"></script><script src="pages.js"></script>
+  <script>
+    const lStepLabels = [
+      'Step 1 of 4 — Member Details',
+      'Step 2 of 4 — Loan Details',
+      'Step 3 of 4 — Employment &amp; Security',
+      'Step 4 of 4 — Documents &amp; Declaration'
+    ];
+    function lNext(step) {
+      [1,2,3,4].forEach(i => {
+        document.getElementById('lStep'+i).style.display = i===step ? 'block' : 'none';
+        document.getElementById('ls'+i).style.background = i <= step ? 'var(--green)' : 'var(--border)';
+      });
+      document.getElementById('lStepLabel').innerHTML = lStepLabels[step-1];
+      window.scrollTo({top: document.querySelector('.page-hero').offsetHeight + 80, behavior:'smooth'});
+    }
+    function updateLoanSummary() {
+      const P = parseFloat(document.getElementById('lAmount').value) || 0;
+      const n = parseInt(document.getElementById('lPeriod').value) || 0;
+      if (!P || !n) { document.getElementById('loanSummaryBox').style.display='none'; return; }
+      const r = 0.01;
+      const monthly = P * r * Math.pow(1+r,n) / (Math.pow(1+r,n)-1);
+      const total = monthly * n;
+      document.getElementById('loanSummaryBox').style.display = 'block';
+      document.getElementById('lSummaryMonthly').textContent = 'KSh ' + Math.round(monthly).toLocaleString();
+      document.getElementById('lSummaryTotal').textContent = 'KSh ' + Math.round(total).toLocaleString();
+      document.getElementById('lSummaryInterest').textContent = 'KSh ' + Math.round(total-P).toLocaleString();
+    }
+    function updateLoanFields() {}
+    function submitLoan() {
+      if (!document.getElementById('lDeclare').checked || !document.getElementById('lTerms').checked) {
+        alert('Please check both declaration boxes to submit.'); return;
+      }
+      const ref = 'RF-LN-2025-' + Math.floor(10000 + Math.random()*90000);
+      document.getElementById('lRefNo').textContent = ref;
+      document.getElementById('lAppSuccess').style.display = 'flex';
+      document.getElementById('lSubmitBtn').disabled = true;
+      document.getElementById('lSubmitBtn').textContent = '✅ Submitted';
+    }
+  </script>
+</body>
+</html>

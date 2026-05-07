@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loans | Ridgeways Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="topbar"><div class="container"><div class="topbar-left"><span>📞 0700 123 456</span><span>✉️ info@ridgewaysfinance.co.ke</span></div><div><a href="member-login.html">Member Login</a><a href="contact.html">Contact Us</a></div></div></div>
+  <header><div class="container"><div class="header-inner">
+     <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <nav id="mainNav"></a><a href="products.html">Products</a><a href="loans.html" class="active">Loans</a><a href="savings.html">Savings</a><a href="digital-banking.html">Digital Banking</a><a href="about.html">About Us</a><a href="membership.html" class="nav-cta">Join Now →</a></nav>
+  </div></div></header>
+
+  <div class="page-hero">
+    <div class="page-hero-circle"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Loans</span></div>
+      <h1>Loan Products<br><em>Built for Growth</em></h1>
+      <p>Flexible, transparent, and affordable loan products for individuals, businesses, and farmers — with fast processing and no hidden charges.</p>
+      <div class="page-hero-tags">
+        <span class="page-hero-tag">⚡ Fast Approval</span>
+        <span class="page-hero-tag">🔒 No Hidden Fees</span>
+        <span class="page-hero-tag">📅 Flexible Repayment</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-body">
+    <div class="container">
+      <div class="sidebar-layout">
+        <!-- SIDEBAR -->
+        <div>
+          <div class="sidebar-nav">
+            <div class="sidebar-nav-title">Loan Products</div>
+            <ul>
+              <li><a href="#development" class="active">💰 Development Loan</a></li>
+              <li><a href="#supersaver">⚡ Supersaver Loan</a></li>
+              <li><a href="#business">💼 Business Loan</a></li>
+              <li><a href="#overdraft">💳 Business Overdraft</a></li>
+              <li><a href="#salary">💵 Salary Advance</a></li>
+              <li><a href="#mazao">🌾 Mazao Loan</a></li>
+              <li><a href="#livestock">🐄 Livestock Loan</a></li>
+              <li><a href="#jiunge">🤝 Jiunge na Mapato</a></li>
+            </ul>
+            <div class="sidebar-cta">
+              <p>Ready to apply for a loan?</p>
+              <a href="loan-application.html">Apply Now →</a>
+            </div>
+          </div>
+          <!-- Loan Calculator -->
+          <div class="calculator" style="margin-top:24px">
+            <h3>🧮 Loan Calculator</h3>
+            <div class="form-group">
+              <label class="form-label">Loan Amount (KSh)</label>
+              <input type="range" class="range-input" id="loanAmt" min="10000" max="5000000" step="10000" value="200000" oninput="calcLoan()">
+              <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--gray);margin-top:4px"><span>KSh 10K</span><strong id="loanAmtDisplay" style="color:var(--green)">KSh 200,000</strong><span>KSh 5M</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Repayment Period (months)</label>
+              <input type="range" class="range-input" id="loanMonths" min="3" max="60" step="1" value="12" oninput="calcLoan()">
+              <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--gray);margin-top:4px"><span>3 mo</span><strong id="loanMonthsDisplay" style="color:var(--green)">12 months</strong><span>60 mo</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Monthly Interest Rate (%)</label>
+              <select class="form-select" id="loanRate" onchange="calcLoan()">
+                <option value="0.8">0.8% — Mazao/Agri</option>
+                <option value="0.9">0.9% — Supersaver</option>
+                <option value="1.0" selected>1.0% — Development</option>
+                <option value="1.1">1.1% — Asset Finance</option>
+                <option value="1.2">1.2% — Business</option>
+              </select>
+            </div>
+            <div class="calc-result">
+              <div class="result-label">Monthly Repayment</div>
+              <div class="result-value" id="loanMonthly">KSh 17,686</div>
+              <div class="calc-breakdown">
+                <div class="calc-row"><span>Total Repayment</span><strong id="loanTotal">KSh 212,232</strong></div>
+                <div class="calc-row"><span>Total Interest</span><strong id="loanInterest">KSh 12,232</strong></div>
+                <div class="calc-row"><span>Processing Fee</span><strong>1% (once-off)</strong></div>
+              </div>
+            </div>
+            <a href="loan-application.html" class="btn-green" style="margin-top:16px;display:block;text-align:center">Apply for This Loan →</a>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div>
+          <!-- Development Loan -->
+          <div id="development" style="margin-bottom:50px">
+            <span class="section-tag">Personal &amp; Business</span>
+            <h2 class="section-title">Development Loan</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">The Development Loan is our flagship product, designed to help members finance personal goals and business projects at affordable rates.</p>
+            <div class="stats-row" style="margin:0 0 28px">
+              <div class="stat-box"><span class="num">1%</span><div class="label">Monthly Rate</div></div>
+              <div class="stat-box"><span class="num">48</span><div class="label">Max Months</div></div>
+              <div class="stat-box"><span class="num">3×</span><div class="label">Savings Multiple</div></div>
+              <div class="stat-box"><span class="num">3–5</span><div class="label">Days Processing</div></div>
+            </div>
+            <div class="feature-list" style="margin-bottom:24px">
+              <div class="feature-list-item"><div class="fi-icon">✅</div><div><h5>No Guarantor Required</h5><p>Up to KSh 500K with savings as collateral. Larger amounts need guarantors.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">📋</div><div><h5>Minimal Documentation</h5><p>National ID, payslip or bank statement, and membership certificate.</p></div></div>
+              <div class="feature-list-item"><div class="fi-icon">🔄</div><div><h5>Top-Up Facility</h5><p>Already servicing a loan? Apply for a top-up after 6 months of clean repayment.</p></div></div>
+            </div>
+            <div class="alert alert-gold"><span class="alert-icon">💡</span><div>Earn 5% back on savings used as collateral while your loan is active — your money works both ways.</div></div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid var(--border);margin-bottom:50px">
+
+          <!-- Supersaver -->
+          <div id="supersaver" style="margin-bottom:50px">
+            <span class="section-tag">Instant Credit</span>
+            <h2 class="section-title">Supersaver Loan</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:24px">The fastest way to access funds — secured instantly against your savings balance. No waiting, no guarantors.</p>
+            <div class="two-col" style="gap:30px;margin-bottom:24px">
+              <div class="card-green" style="border-radius:16px;padding:24px">
+                <div style="font-size:2rem;margin-bottom:8px">⚡</div>
+                <h4 style="color:white;font-size:1rem;margin-bottom:6px">Instant Approval</h4>
+                <p style="color:rgba(255,255,255,0.75);font-size:0.85rem">Processed in under 30 minutes via our mobile app or USSD *288#</p>
+              </div>
+              <div class="card-gold" style="border-radius:16px;padding:24px">
+                <div style="font-size:2rem;margin-bottom:8px">💰</div>
+                <h4 style="color:var(--green-dark);font-size:1rem;margin-bottom:6px">Up to 3× Savings</h4>
+                <p style="color:var(--green-dark);opacity:0.8;font-size:0.85rem">Borrow up to 3 times your current savings balance at just 0.9% p.m.</p>
+              </div>
+            </div>
+            <div class="steps">
+              <div class="step-item"><div class="step-num">1</div><div class="step-body"><h4>Dial *288# or open the app</h4><p>Navigate to Loans → Supersaver Loan</p></div></div>
+              <div class="step-item"><div class="step-num">2</div><div class="step-body"><h4>Enter desired amount</h4><p>The app shows your maximum eligible amount automatically</p></div></div>
+              <div class="step-item"><div class="step-num">3</div><div class="step-body"><h4>Confirm with your PIN</h4><p>Funds disbursed to your Ridgeways Finance account instantly</p></div></div>
+              <div class="step-item"><div class="step-num">4</div><div class="step-body"><h4>Repay at your convenience</h4><p>Up to 12 months, with no early repayment penalty</p></div></div>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid var(--border);margin-bottom:50px">
+
+          <!-- Business / Salary / Mazao cards -->
+          <div id="business" style="margin-bottom:40px">
+            <span class="section-tag">Enterprise</span>
+            <h2 class="section-title">Business Loan</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:20px">Access up to KSh 5 million to start, grow, or stabilise your business. Repayment is structured to match your cash flow cycle.</p>
+            <div class="alert alert-green"><span class="alert-icon">✅</span><div><strong>Requirements:</strong> Minimum 6 months membership · Business registration documents · 3 months bank statement or M-Pesa statement · 2 guarantors</div></div>
+          </div>
+
+          <div id="salary" style="margin-bottom:40px">
+            <span class="section-tag">For Employees</span>
+            <h2 class="section-title">Salary Advance</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:20px">Access up to 3 months net salary in hours. Available to employed members with salary processing through Ridgeways Finance.</p>
+            <div class="alert alert-green"><span class="alert-icon">✅</span><div><strong>Requirements:</strong> Employed member · Salary processed through RF · Employment letter · Minimum 3 months membership</div></div>
+          </div>
+
+          <div id="mazao" style="margin-bottom:40px">
+            <span class="section-tag">Agriculture</span>
+            <h2 class="section-title">Mazao &amp; Livestock Loans</h2>
+            <p style="color:var(--gray);line-height:1.75;margin-bottom:20px">Specially designed for farmers and agri-business owners. Finance inputs, equipment, livestock purchase, or farm improvements at our lowest rates.</p>
+            <div class="alert alert-gold"><span class="alert-icon">🌾</span><div>Rate as low as <strong>0.8% p.m.</strong> — our most affordable loan product, in support of food security and rural livelihoods.</div></div>
+          </div>
+
+          <!-- FAQ -->
+          <span class="section-tag">FAQs</span>
+          <h2 class="section-title" style="margin-bottom:24px">Loan Questions Answered</h2>
+          <div class="accordion" id="loanFaq">
+            <div class="accordion-item open">
+              <div class="accordion-header">How soon can I get my first loan?<span class="accordion-icon">+</span></div>
+              <div class="accordion-body">You can apply for a loan after 3 months of active membership and having made consistent monthly contributions. Supersaver loans are available after just 1 month.</div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">What collateral do I need?<span class="accordion-icon">+</span></div>
+              <div class="accordion-body">Your savings balance serves as primary collateral. For larger amounts, you will need one or more guarantors who are Ridgeways Finance members in good standing.</div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">Can I repay my loan early?<span class="accordion-icon">+</span></div>
+              <div class="accordion-body">Yes. There is no early repayment penalty. You will only pay interest for the months the loan was outstanding, saving you money on the remaining balance.</div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">What happens if I miss a repayment?<span class="accordion-icon">+</span></div>
+              <div class="accordion-body">A penalty of 5% is charged on the outstanding instalment. We encourage members to contact us before missing a payment — we can help restructure your repayment schedule.</div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">Can I have more than one loan?<span class="accordion-icon">+</span></div>
+              <div class="accordion-body">Yes, subject to your repayment capacity and total outstanding balance not exceeding the approved multiplier of your shares and savings.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="membership-cta">
+    <div class="container"><div class="cta-inner reveal">
+      <span class="section-tag">Apply Today</span>
+      <h2 class="section-title">Start Your Loan Application</h2>
+      <p class="section-subtitle">Members can apply online, via *288#, or by visiting any of our branches.</p>
+      <div class="cta-buttons">
+        <a href="loan-application.html" class="btn-gold">📋 Apply Online</a>
+        <a href="contact.html" class="btn-white-outline">🏢 Visit a Branch</a>
+      </div>
+    </div></div>
+  </section>
+
+  <div class="paybill"><div class="container"><p>💳 Paybill: <strong>700288</strong></p><div class="divider"></div><p>📱 USSD: <strong>*288#</strong></p><div class="divider"></div><p>📞 <strong>0700 123 456</strong></p></div></div>
+  <footer><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">R</div><div class="logo-text"><strong>Ridgeways Finance</strong><span style="color:var(--gold)">Your Financial Partner</span></div></a><p>Regulated by SASRA. Serving members across Nairobi since 2008.<a href="https://www.facebook.com/profile.php?id=61572052684912" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/ridgeways_properties/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram / X">i</a></p></div>
+    <div><h4>Quick Links</h4><ul><li><a href="about.html">→ About Us</a></li><li><a href="membership.html">→ Membership</a></li><li><a href="loans.html">→ Loans</a></li><li><a href="savings.html">→ Savings</a></li><li><a href="contact.html">→ Contact</a></li></ul></div>
+    <div><h4>Loan Products</h4><ul><li><a href="#development">→ Development Loan</a></li><li><a href="#supersaver">→ Supersaver</a></li><li><a href="#business">→ Business Loan</a></li><li><a href="#salary">→ Salary Advance</a></li><li><a href="#mazao">→ Mazao Loan</a></li></ul></div>
+    <div class="footer-contact"><h4>Contact Us</h4><p>📍 <span>Ridgeways, Nairobi</span></p><p>📞 <span>0700 123 456</span></p><p>✉️ <span>info@ridgewaysfinance.co.ke</span></p><p>🕐 <span>Mon–Sat: 8am–5pm</span></p></div>
+  </div><div class="footer-bottom"><p>© 2025 Ridgeways Finance Sacco Society Limited.</p><div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></div></footer>
+  <button id="backToTop">↑</button>
+  <script src="main.js"></script><script src="pages.js"></script>
+  <script>
+    function calcLoan() {
+      const P = parseFloat(document.getElementById('loanAmt').value);
+      const n = parseInt(document.getElementById('loanMonths').value);
+      const r = parseFloat(document.getElementById('loanRate').value) / 100;
+      document.getElementById('loanAmtDisplay').textContent = 'KSh ' + P.toLocaleString();
+      document.getElementById('loanMonthsDisplay').textContent = n + ' months';
+      const monthly = r === 0 ? P/n : P * r * Math.pow(1+r,n) / (Math.pow(1+r,n)-1);
+      const total = monthly * n;
+      document.getElementById('loanMonthly').textContent = 'KSh ' + Math.round(monthly).toLocaleString();
+      document.getElementById('loanTotal').textContent = 'KSh ' + Math.round(total).toLocaleString();
+      document.getElementById('loanInterest').textContent = 'KSh ' + Math.round(total - P).toLocaleString();
+    }
+    calcLoan();
+  </script>
+</body>
+</html>

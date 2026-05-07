@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Login | Ridgeways Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="topbar"><div class="container"><div class="topbar-left"><span>📞 0700 123 456</span><span>✉️ info@ridgewaysfinance.co.ke</span></div><div><a href="index.html">← Back to Website</a></div></div></div>
+
+  <div class="auth-page">
+    <!-- Left panel (desktop) -->
+    <div style="position:absolute;left:0;top:0;bottom:0;width:45%;display:flex;flex-direction:column;justify-content:center;padding:60px;z-index:1" class="auth-left-panel">
+       <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+      <h2 style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:white;line-height:1.2;margin-bottom:16px">Welcome<br>Back 👋</h2>
+      <p style="color:rgba(255,255,255,0.72);line-height:1.75;font-size:0.95rem;margin-bottom:36px">Log in to access your accounts, check balances, apply for loans, and manage your finances from anywhere.</p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.7);font-size:0.88rem"><span style="font-size:1.2rem">✅</span> View account balances &amp; statements</div>
+        <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.7);font-size:0.88rem"><span style="font-size:1.2rem">✅</span> Apply for loans instantly</div>
+        <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.7);font-size:0.88rem"><span style="font-size:1.2rem">✅</span> Transfer funds &amp; pay bills</div>
+        <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.7);font-size:0.88rem"><span style="font-size:1.2rem">✅</span> Download official statements</div>
+      </div>
+      <div style="margin-top:48px;padding:20px;background:rgba(255,255,255,0.08);border-radius:14px;border:1px solid rgba(255,255,255,0.12)">
+        <p style="color:rgba(255,255,255,0.6);font-size:0.8rem;margin-bottom:8px">Or bank via mobile:</p>
+        <p style="color:var(--gold);font-size:1.4rem;font-weight:900;font-family:'Playfair Display',serif">*288#</p>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.78rem">Dial on any mobile network</p>
+      </div>
+    </div>
+
+    <!-- Login Card -->
+    <div class="auth-card" style="margin-left:auto;margin-right:60px;position:relative;z-index:2">
+       <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="Ridgeways Finance Logo" class="logo-img" />
+          <div class="logo-text">
+            <strong>Ridgeways Finance</strong>
+            <span>Your Financial Partner</span>
+          </div>
+        </a>
+      <h2>Member Login</h2>
+      <p class="subtitle">Access your account securely</p>
+
+      <div class="alert alert-green" id="loginSuccess" style="display:none">
+        <span class="alert-icon">✅</span><div>Login successful! Redirecting to your dashboard...</div>
+      </div>
+      <div class="alert alert-red" id="loginError" style="display:none">
+        <span class="alert-icon">❌</span><div id="loginErrorMsg">Invalid member number or password. Please try again.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Member Number <span>*</span></label>
+        <input type="text" class="form-input" id="memberNo" placeholder="e.g. RF-2024-001234" />
+        <div class="form-hint">Your member number is on your membership certificate</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password / PIN <span>*</span></label>
+        <div class="password-wrap">
+          <input type="password" class="form-input" id="password" placeholder="Enter your password" />
+          <button class="password-toggle" onclick="togglePwd()" id="pwdToggle">👁️</button>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-size:0.84rem">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--gray)">
+          <input type="checkbox" style="accent-color:var(--green)"> Remember me
+        </label>
+        <a href="forgot-password.html" style="color:var(--green);font-weight:600;text-decoration:none">Forgot password?</a>
+      </div>
+      <button class="btn-full btn-full-green" onclick="handleLogin()">Log In to My Account</button>
+
+      <div class="auth-divider">or</div>
+
+      <a href="digital-banking.html" style="display:flex;align-items:center;justify-content:center;gap:10px;background:var(--green-light);color:var(--green);border-radius:10px;padding:12px;text-decoration:none;font-weight:700;font-size:0.9rem;border:1.5px solid var(--border)">
+        📟 Use USSD *288# Instead
+      </a>
+
+      <div class="auth-footer">
+        Not yet a member? <a href="membership.html">Join Ridgeways Finance →</a>
+      </div>
+      <div class="auth-footer" style="margin-top:8px">
+        Need help? <a href="contact.html">Contact Support</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    function togglePwd() {
+      const input = document.getElementById('password');
+      const btn = document.getElementById('pwdToggle');
+      if (input.type === 'password') { input.type = 'text'; btn.textContent = '🙈'; }
+      else { input.type = 'password'; btn.textContent = '👁️'; }
+    }
+    function handleLogin() {
+      const member = document.getElementById('memberNo').value.trim();
+      const pwd = document.getElementById('password').value.trim();
+      document.getElementById('loginError').style.display = 'none';
+      document.getElementById('loginSuccess').style.display = 'none';
+      if (!member || !pwd) {
+        document.getElementById('loginErrorMsg').textContent = 'Please enter your member number and password.';
+        document.getElementById('loginError').style.display = 'flex'; return;
+      }
+      // Demo: redirect to dashboard
+      document.getElementById('loginSuccess').style.display = 'flex';
+      setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Enter') handleLogin(); });
+
+    // Hide left panel on mobile
+    function adjustLayout() {
+      const panel = document.querySelector('.auth-left-panel');
+      const card = document.querySelector('.auth-card');
+      if (window.innerWidth < 900) {
+        if (panel) panel.style.display = 'none';
+        if (card) { card.style.marginRight = 'auto'; }
+      } else {
+        if (panel) panel.style.display = 'flex';
+      }
+    }
+    adjustLayout();
+    window.addEventListener('resize', adjustLayout);
+  </script>
+</body>
+</html>
