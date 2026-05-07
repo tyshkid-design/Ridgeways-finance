@@ -9,39 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('mainNav');
 
   if (hamburger && nav) {
-    // Improve mobile nav behavior: toggle + close on link click + close on outside click
-    const setOpen = (isOpen) => {
-      hamburger.classList.toggle('open', isOpen);
-      nav.classList.toggle('mobile-open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-    };
-
-    // Ensure correct initial state
-    hamburger.setAttribute('aria-expanded', 'false');
-
-    hamburger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = !nav.classList.contains('mobile-open');
-      setOpen(isOpen);
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      nav.classList.toggle('mobile-open');
     });
 
     // Close nav when a link is clicked
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        setOpen(false);
+        hamburger.classList.remove('open');
+        nav.classList.remove('mobile-open');
       });
-    });
-
-    // Close nav when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!nav.classList.contains('mobile-open')) return;
-      if (nav.contains(e.target) || hamburger.contains(e.target)) return;
-      setOpen(false);
-    });
-
-    // Accessibility: allow ESC to close
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') setOpen(false);
     });
   }
 
@@ -109,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Current Account',
       desc: 'Ideal for business transactions and personal use. Enjoy no withdrawal limits, free cheque clearing, and produce/salary processing.',
       rate: null,
+      link: 'membership.html',
+      btnLabel: 'Open a Current Account',
       details: [
         { label: 'Withdrawal Limits', value: 'None' },
         { label: 'Minimum Balance', value: 'KSh 1,000' },
@@ -120,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Savings Account',
       desc: 'Everyday savings with competitive interest. Perfect for building an emergency fund or saving towards a specific goal.',
       rate: '5%',
+      link: 'savings.html#savings',
+      btnLabel: 'Open a Savings Account',
       details: [
         { label: 'Interest Rate', value: 'Up to 5% P.A.' },
         { label: 'Minimum Deposit', value: 'KSh 500' },
@@ -131,6 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Fixed Deposit Account',
       desc: 'Earn an attractive interest on your savings. Choose your preferred investment period and watch your money grow.',
       rate: '8.5%',
+      link: 'savings.html#fixed',
+      btnLabel: 'Open a Fixed Deposit',
       details: [
         { label: 'Minimum Period', value: '3 Months' },
         { label: 'Maximum Period', value: '12 Months' },
@@ -142,6 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Akiba Savings Account',
       desc: 'Goal-based savings account. Save for holidays, school fees, weddings, or long-term projects and earn competitive interest.',
       rate: '7%',
+      link: 'savings.html#akiba',
+      btnLabel: 'Open an Akiba Account',
       details: [
         { label: 'Interest Rate', value: 'Up to 7% P.A.' },
         { label: 'Minimum Monthly', value: 'KSh 1,000' },
@@ -153,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Corporate Account',
       desc: 'Designed for welfare groups, companies, schools, hospitals and churches. Enjoy bulk transaction facilities and dedicated support.',
       rate: null,
+      link: 'savings.html#corporate',
+      btnLabel: 'Enquire About Corporate Account',
       details: [
         { label: 'Account Type', value: 'Institutional' },
         { label: 'Multi-Signatory', value: 'Supported' },
@@ -195,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>${data.desc}</p>
       ${rateBlock}
       <ul class="savings-table">${tableRows}</ul>
-      <a href="#" class="btn-green">Open ${data.title} →</a>
+      <a href="${data.link}" class="btn-green">${data.btnLabel} →</a>
     `;
 
     // Animate the box
