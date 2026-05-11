@@ -831,7 +831,7 @@ footer { background: var(--dark); color: #9ca3af; padding: 70px 0 32px; }
 }
 .footer-brand .logo-text strong { color: white; }
 .footer-brand p { font-size: 0.85rem; line-height: 1.7; margin: 14px 0 20px; color: #9ca3af; }
-.social-links { display: flex; gap: 10px; }
+.social-links { display: flex; gap: 10px; justify-content: flex-start; align-items: center; }
 .social-link {
   width: 38px; height: 38px;
   border-radius: 10px;
